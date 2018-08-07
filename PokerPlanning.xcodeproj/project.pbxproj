@@ -129,10 +129,20 @@
 		6B0A2C60211A200A0047A450 /* PokerPlanning */ = {
 			isa = PBXGroup;
 			children = (
+				6B0A2C8F211A334B0047A450 /* Coordinator */,
+				6B0A2C99211A338E0047A450 /* Storage */,
+				6B0A2C98211A33890047A450 /* Model */,
+				6B0A2C97211A33840047A450 /* Utils */,
+				6B0A2C96211A33780047A450 /* RxExtensions */,
+				6B0A2C95211A33700047A450 /* Resources */,
+				6B0A2C94211A336A0047A450 /* Service */,
+				6B0A2C93211A33650047A450 /* Repositories */,
+				6B0A2C92211A335E0047A450 /* Modules */,
+				6B0A2C91211A33570047A450 /* Components */,
+				6B0A2C90211A33500047A450 /* Container */,
 				6B0A2C61211A200A0047A450 /* AppDelegate.swift */,
 				6B0A2C63211A200A0047A450 /* ViewController.swift */,
 				6B0A2C65211A200A0047A450 /* Main.storyboard */,
-				6B0A2C68211A20110047A450 /* Assets.xcassets */,
 				6B0A2C6A211A20110047A450 /* LaunchScreen.storyboard */,
 				6B0A2C6D211A20110047A450 /* Info.plist */,
 			);
@@ -155,6 +165,85 @@
 				6B0A2C83211A20110047A450 /* Info.plist */,
 			);
 			path = PokerPlanningUITests;
+			sourceTree = "<group>";
+		};
+		6B0A2C8F211A334B0047A450 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		6B0A2C90211A33500047A450 /* Container */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Container;
+			sourceTree = "<group>";
+		};
+		6B0A2C91211A33570047A450 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		6B0A2C92211A335E0047A450 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		6B0A2C93211A33650047A450 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		6B0A2C94211A336A0047A450 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		6B0A2C95211A33700047A450 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				6B0A2C68211A20110047A450 /* Assets.xcassets */,
+			);
+			name = Resources;
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		6B0A2C96211A33780047A450 /* RxExtensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = RxExtensions;
+			sourceTree = "<group>";
+		};
+		6B0A2C97211A33840047A450 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		6B0A2C98211A33890047A450 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6B0A2C99211A338E0047A450 /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Storage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
