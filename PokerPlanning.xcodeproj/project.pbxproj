@@ -15,6 +15,7 @@
 		6B0A2C6C211A20110047A450 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B0A2C6A211A20110047A450 /* LaunchScreen.storyboard */; };
 		6B0A2C77211A20110047A450 /* PokerPlanningTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0A2C76211A20110047A450 /* PokerPlanningTests.swift */; };
 		6B0A2C82211A20110047A450 /* PokerPlanningUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0A2C81211A20110047A450 /* PokerPlanningUITests.swift */; };
+		6B830A8B211BA1CA003BFFC3 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 6B830A8A211BA1CA003BFFC3 /* .swiftlint.yml */; };
 		6ECBCCF1A06AF5F00FB678B0 /* Pods_PokerPlanning.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62776643CA07632A9D131E81 /* Pods_PokerPlanning.framework */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +55,7 @@
 		6B0A2C81211A20110047A450 /* PokerPlanningUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokerPlanningUITests.swift; sourceTree = "<group>"; };
 		6B0A2C83211A20110047A450 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6B7021BFEA8F2C2FC5A4D99E /* Pods-PokerPlanningTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PokerPlanningTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PokerPlanningTests/Pods-PokerPlanningTests.debug.xcconfig"; sourceTree = "<group>"; };
+		6B830A8A211BA1CA003BFFC3 /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = "<group>"; };
 		B3BBB82BC6ABEE0BE030FDE6 /* Pods-PokerPlanning.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PokerPlanning.release.xcconfig"; path = "Pods/Target Support Files/Pods-PokerPlanning/Pods-PokerPlanning.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -107,6 +109,7 @@
 		6B0A2C55211A20090047A450 = {
 			isa = PBXGroup;
 			children = (
+				6B830A8A211BA1CA003BFFC3 /* .swiftlint.yml */,
 				6B0A2C60211A200A0047A450 /* PokerPlanning */,
 				6B0A2C75211A20110047A450 /* PokerPlanningTests */,
 				6B0A2C80211A20110047A450 /* PokerPlanningUITests */,
@@ -259,6 +262,7 @@
 				6B0A2C5C211A200A0047A450 /* Resources */,
 				873CFD61C3CDF282E0EB76D5 /* [CP] Embed Pods Frameworks */,
 				EDE90E43C52E7D10F3023CE2 /* [CP] Copy Pods Resources */,
+				6B830A89211B9F77003BFFC3 /* Swift Lint */,
 			);
 			buildRules = (
 			);
@@ -356,6 +360,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B830A8B211BA1CA003BFFC3 /* .swiftlint.yml in Resources */,
 				6B0A2C6C211A20110047A450 /* LaunchScreen.storyboard in Resources */,
 				6B0A2C69211A20110047A450 /* Assets.xcassets in Resources */,
 				6B0A2C67211A200A0047A450 /* Main.storyboard in Resources */,
@@ -414,6 +419,20 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
+		};
+		6B830A89211B9F77003BFFC3 /* Swift Lint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Swift Lint";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"";
 		};
 		873CFD61C3CDF282E0EB76D5 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
