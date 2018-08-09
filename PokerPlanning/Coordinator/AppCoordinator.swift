@@ -44,9 +44,8 @@ class AppCoordinator: Coordinator {
     }
     
     fileprivate func showOnboarding() {
-//        let view = container.resolve(OnboardingView.self)!
-//        view.delegate = self
-//        self.currentView = view
+        let view = container.resolve(OnboardingView.self)!
+        self.currentView = view
     }
     
     fileprivate func showMainView() {
