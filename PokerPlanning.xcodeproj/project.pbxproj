@@ -18,6 +18,10 @@
 		6B818D73211F2C2900C9B53D /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B818D70211F2C2900C9B53D /* LoginView.swift */; };
 		6B818D74211F2C2900C9B53D /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B818D71211F2C2900C9B53D /* LoginViewModel.swift */; };
 		6B818D75211F2C2900C9B53D /* LoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B818D72211F2C2900C9B53D /* LoginView.xib */; };
+		6B818D79211F2CA400C9B53D /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B818D76211F2CA400C9B53D /* MainView.swift */; };
+		6B818D7A211F2CA400C9B53D /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B818D77211F2CA400C9B53D /* MainViewModel.swift */; };
+		6B818D7B211F2CA400C9B53D /* MainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B818D78211F2CA400C9B53D /* MainView.xib */; };
+		6B818D7D211F2F2300C9B53D /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B818D7C211F2F2300C9B53D /* MainCoordinator.swift */; };
 		6B830A8B211BA1CA003BFFC3 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 6B830A8A211BA1CA003BFFC3 /* .swiftlint.yml */; };
 		6B830A90211C71BB003BFFC3 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B830A8F211C71BB003BFFC3 /* Coordinator.swift */; };
 		6B830A92211C71CE003BFFC3 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B830A91211C71CE003BFFC3 /* AppCoordinator.swift */; };
@@ -70,6 +74,10 @@
 		6B818D70211F2C2900C9B53D /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		6B818D71211F2C2900C9B53D /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		6B818D72211F2C2900C9B53D /* LoginView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginView.xib; sourceTree = "<group>"; };
+		6B818D76211F2CA400C9B53D /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		6B818D77211F2CA400C9B53D /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		6B818D78211F2CA400C9B53D /* MainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainView.xib; sourceTree = "<group>"; };
+		6B818D7C211F2F2300C9B53D /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		6B830A8A211BA1CA003BFFC3 /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = "<group>"; };
 		6B830A8F211C71BB003BFFC3 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		6B830A91211C71CE003BFFC3 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
@@ -197,6 +205,7 @@
 			children = (
 				6B830A8F211C71BB003BFFC3 /* Coordinator.swift */,
 				6B830A91211C71CE003BFFC3 /* AppCoordinator.swift */,
+				6B818D7C211F2F2300C9B53D /* MainCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -285,6 +294,9 @@
 		6B818D6E211F2AF100C9B53D /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				6B818D76211F2CA400C9B53D /* MainView.swift */,
+				6B818D77211F2CA400C9B53D /* MainViewModel.swift */,
+				6B818D78211F2CA400C9B53D /* MainView.xib */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -424,6 +436,7 @@
 				6B830A8B211BA1CA003BFFC3 /* .swiftlint.yml in Resources */,
 				6B830A9B211C82D0003BFFC3 /* OnboardingView.xib in Resources */,
 				6B0A2C6C211A20110047A450 /* LaunchScreen.storyboard in Resources */,
+				6B818D7B211F2CA400C9B53D /* MainView.xib in Resources */,
 				6B818D75211F2C2900C9B53D /* LoginView.xib in Resources */,
 				6B0A2C69211A20110047A450 /* Assets.xcassets in Resources */,
 			);
@@ -610,12 +623,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				6B830A92211C71CE003BFFC3 /* AppCoordinator.swift in Sources */,
+				6B818D79211F2CA400C9B53D /* MainView.swift in Sources */,
 				6B818D6B211F29BD00C9B53D /* LocalStorage.swift in Sources */,
 				6B830A9F211C833A003BFFC3 /* DefaultContainer+Services.swift in Sources */,
 				6B830A9A211C82D0003BFFC3 /* OnboardingViewModel.swift in Sources */,
+				6B818D7A211F2CA400C9B53D /* MainViewModel.swift in Sources */,
 				6B830AA1211C87DE003BFFC3 /* DefaultContainer+Views.swift in Sources */,
 				6B0A2C62211A200A0047A450 /* AppDelegate.swift in Sources */,
 				6B818D73211F2C2900C9B53D /* LoginView.swift in Sources */,
+				6B818D7D211F2F2300C9B53D /* MainCoordinator.swift in Sources */,
 				6B830A9D211C8313003BFFC3 /* DefaultContainer.swift in Sources */,
 				6B818D74211F2C2900C9B53D /* LoginViewModel.swift in Sources */,
 				6B818D6D211F29C800C9B53D /* LocalStorageImpl.swift in Sources */,

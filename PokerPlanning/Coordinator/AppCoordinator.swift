@@ -14,9 +14,11 @@ class AppCoordinator: Coordinator {
     
     let window: UIWindow
     let container: Container
-//    lazy var storage: LocalStorage = {
-//        container.resolve(LocalStorage.self)!
-//    }()
+    lazy var storage: LocalStorage = {
+        container.resolve(LocalStorage.self)!
+    }()
+    
+    var mainCoordinator: MainCoordinator?
     
     var currentView: UIViewController? {
         get {
@@ -36,11 +38,11 @@ class AppCoordinator: Coordinator {
     
     func start() {
         
-//        if storage.firstAccess {
+        if storage.isLoggedIn {
             showOnboarding()
-//        } else {
-//            showMainView()
-//        }
+        } else {
+            showMainView()
+        }
     }
     
     fileprivate func showOnboarding() {
@@ -49,9 +51,8 @@ class AppCoordinator: Coordinator {
     }
     
     fileprivate func showMainView() {
-//        let view = container.resolve(MainView.self)!
-//        view.delegate = self
-//        self.currentView = view
+        self.mainCoordinator = MainCoordinator(window: self.window, container: self.container)
+        mainCoordinator?.start()
     }
 
 }
