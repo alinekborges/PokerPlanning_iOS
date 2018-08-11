@@ -28,9 +28,9 @@ extension DefaultContainer {
     
     func registerStorage() {
         
-//        self.container.register(LocalStorage.self) { _ in
-//            return LocalStorageImpl()
-//        }
+        self.container.register(LocalStorage.self) { _ in
+            return LocalStorageImpl()
+        }
         
     }
     

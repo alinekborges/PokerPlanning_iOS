@@ -1,8 +1,8 @@
 //
-//  OnboardingView.swift
+//  MainView.swift
 //  PokerPlanning
 //
-//  Created by Aline Borges on 09/08/2018.
+//  Created by Aline Borges on 11/08/2018.
 //  Copyright © 2018 Aline Borges. All rights reserved.
 //
 
@@ -10,24 +10,18 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-protocol OnboardingViewDelegate: class {
+protocol MainViewDelegate: class {
     
 }
 
-enum OnboardingActions {
-    case login
-}
-
-class OnboardingView: UIViewController {
+class MainView: UIViewController {
     
-    @IBOutlet weak var loginButton: UIButton!
+    var viewModel: MainViewModel!
     
-    var viewModel: OnboardingViewModel!
-    
-    weak var delegate: OnboardingViewDelegate?
+    weak var delegate: MainViewDelegate?
 
     init() {
-        super.init(nibName: String(describing: OnboardingView.self), bundle: nil)
+        super.init(nibName: String(describing: MainView.self), bundle: nil)
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -43,10 +37,10 @@ class OnboardingView: UIViewController {
     
 }
 
-extension OnboardingView {
+extension MainView {
     
     func setupViewModel() {
-        self.viewModel = OnboardingViewModel()
+        self.viewModel = MainViewModel()
     }
     
     func configureViews() {
