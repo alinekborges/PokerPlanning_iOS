@@ -17,6 +17,10 @@ extension DefaultContainer {
         self.container.register(OnboardingView.self) { _ in
             OnboardingView()
         }
+        
+        self.register(LoginView.self) { resolver in
+            LoginView()
+        }
 
     }
     
