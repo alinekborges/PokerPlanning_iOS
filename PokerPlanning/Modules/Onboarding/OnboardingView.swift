@@ -10,18 +10,17 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-/*
- Code for dependency injection:
-    self.register(OnboardingView.self) { resolver in
-        OnboardingView()
-    }
- */
-
 protocol OnboardingViewDelegate: class {
     
 }
 
+enum OnboardingActions {
+    case login
+}
+
 class OnboardingView: UIViewController {
+    
+    @IBOutlet weak var loginButton: UIButton!
     
     var viewModel: OnboardingViewModel!
     
