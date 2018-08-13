@@ -10,15 +10,9 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-protocol MainViewDelegate: class {
-    
-}
-
 class MainView: UIViewController {
     
     var viewModel: MainViewModel!
-    
-    weak var delegate: MainViewDelegate?
 
     init() {
         super.init(nibName: String(describing: MainView.self), bundle: nil)
