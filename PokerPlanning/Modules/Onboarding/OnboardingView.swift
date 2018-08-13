@@ -10,21 +10,13 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-protocol OnboardingViewDelegate: class {
-    
-}
-
-enum OnboardingActions {
-    case login
-}
-
 class OnboardingView: UIViewController {
     
     @IBOutlet weak var loginButton: UIButton!
     
     var viewModel: OnboardingViewModel!
     
-    weak var delegate: OnboardingViewDelegate?
+    var delegate: AppActionable?
 
     init() {
         super.init(nibName: String(describing: OnboardingView.self), bundle: nil)
@@ -54,6 +46,8 @@ extension OnboardingView {
     }
     
     func setupBindings() {
-
+        self.loginButton.rx.tap.bind {
+            self.delegate?.handle(.finishOnboarding)
+        }.disposed(by: rx.disposeBag)
     }
 }

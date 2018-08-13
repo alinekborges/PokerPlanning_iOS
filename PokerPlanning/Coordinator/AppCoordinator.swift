@@ -10,6 +10,14 @@ import Foundation
 import UIKit
 import Swinject
 
+enum AppAction {
+    case finishOnboarding
+}
+
+protocol AppActionable {
+    func handle(_ action: AppAction)
+}
+
 class AppCoordinator: Coordinator {
     
     let window: UIWindow
@@ -38,15 +46,31 @@ class AppCoordinator: Coordinator {
     
     func start() {
         
-        if storage.isLoggedIn {
+        if !storage.isLoggedIn {
             showOnboarding()
         } else {
             showMainView()
         }
     }
+
+}
+
+extension AppCoordinator: AppActionable {
+    
+    func handle(_ action: AppAction) {
+        switch action {
+        case .finishOnboarding:
+            self.showMainView()
+        }
+    }
+    
+}
+
+extension AppCoordinator {
     
     fileprivate func showOnboarding() {
         let view = container.resolve(OnboardingView.self)!
+        view.delegate = self
         self.currentView = view
     }
     
@@ -54,5 +78,5 @@ class AppCoordinator: Coordinator {
         self.mainCoordinator = MainCoordinator(window: self.window, container: self.container)
         mainCoordinator?.start()
     }
-
+    
 }
