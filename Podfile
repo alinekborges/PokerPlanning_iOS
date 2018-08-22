@@ -12,6 +12,8 @@ def common_pods
   pod 'R.swift'
   pod 'RxSwiftUtilities', '~> 2.0.1'
   pod 'RxSwiftExt'
+  pod 'Firebase/Core'
+  
 end
 
 target 'PokerPlanning' do
