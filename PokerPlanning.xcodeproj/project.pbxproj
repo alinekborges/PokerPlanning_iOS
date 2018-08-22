@@ -13,6 +13,7 @@
 		6B0A2C6C211A20110047A450 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B0A2C6A211A20110047A450 /* LaunchScreen.storyboard */; };
 		6B0A2C77211A20110047A450 /* PokerPlanningTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0A2C76211A20110047A450 /* PokerPlanningTests.swift */; };
 		6B0A2C82211A20110047A450 /* PokerPlanningUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0A2C81211A20110047A450 /* PokerPlanningUITests.swift */; };
+		6B3E7CD4212DA9500042AE85 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6B3E7CD3212DA9500042AE85 /* GoogleService-Info.plist */; };
 		6B818D6B211F29BD00C9B53D /* LocalStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B818D6A211F29BD00C9B53D /* LocalStorage.swift */; };
 		6B818D6D211F29C800C9B53D /* LocalStorageImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B818D6C211F29C800C9B53D /* LocalStorageImpl.swift */; };
 		6B818D73211F2C2900C9B53D /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B818D70211F2C2900C9B53D /* LoginView.swift */; };
@@ -70,6 +71,7 @@
 		6B0A2C7D211A20110047A450 /* PokerPlanningUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PokerPlanningUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B0A2C81211A20110047A450 /* PokerPlanningUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokerPlanningUITests.swift; sourceTree = "<group>"; };
 		6B0A2C83211A20110047A450 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6B3E7CD3212DA9500042AE85 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "PokerPlanning/GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		6B7021BFEA8F2C2FC5A4D99E /* Pods-PokerPlanningTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PokerPlanningTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PokerPlanningTests/Pods-PokerPlanningTests.debug.xcconfig"; sourceTree = "<group>"; };
 		6B818D6A211F29BD00C9B53D /* LocalStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStorage.swift; sourceTree = "<group>"; };
 		6B818D6C211F29C800C9B53D /* LocalStorageImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStorageImpl.swift; sourceTree = "<group>"; };
@@ -260,6 +262,7 @@
 			children = (
 				6B0A2C68211A20110047A450 /* Assets.xcassets */,
 				6B830A93211C8225003BFFC3 /* R.generated.swift */,
+				6B3E7CD3212DA9500042AE85 /* GoogleService-Info.plist */,
 			);
 			name = Resources;
 			path = "New Group";
@@ -445,6 +448,7 @@
 				6B818D7B211F2CA400C9B53D /* MainView.xib in Resources */,
 				6B818D75211F2C2900C9B53D /* LoginView.xib in Resources */,
 				6B0A2C69211A20110047A450 /* Assets.xcassets in Resources */,
+				6B3E7CD4212DA9500042AE85 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
