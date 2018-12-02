@@ -8,7 +8,7 @@
 
 import Foundation
 import Moya
-//Register Services
+
 extension DefaultContainer {
     
     func registerServices() {

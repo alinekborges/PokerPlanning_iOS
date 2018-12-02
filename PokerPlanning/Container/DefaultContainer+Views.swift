@@ -9,7 +9,6 @@
 import Foundation
 import Swinject
 
-//Register Views
 extension DefaultContainer {
     
     func registerViews() {
