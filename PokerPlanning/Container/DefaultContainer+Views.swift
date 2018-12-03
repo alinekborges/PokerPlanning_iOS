@@ -28,6 +28,10 @@ extension DefaultContainer {
         self.container.register(UsernameView.self) { resolver in
             return UsernameView(repository: resolver.resolve(PlanningRepository.self)!)
         }
+        
+        self.container.register(EnterRoomView.self) { resolver in
+            return EnterRoomView(repository: resolver.resolve(PlanningRepository.self)!)
+        }
 
     }
     

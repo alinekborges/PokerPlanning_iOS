@@ -45,6 +45,24 @@ class FirebasePlanningRepository: PlanningRepository {
             
     }
     
+    func allRooms() -> Observable<[SessionRoom]> {
+        return self.firestore
+            .collection("rooms")
+            .rx
+            .listen()
+            .mapArray(SessionRoom.self)
+    }
+    
+    func createRoom(_ name: String) -> Observable<String> {
+        return self.firestore
+            .collection("rooms")
+            .document(name)
+            .rx
+            .setData(["users": [], "id": name])
+            .map { _ in return name} 
+        
+    }
+    
     func enterRoom(_ name: String) -> Observable<SessionRoom> {
         
         return self.firestore
@@ -121,9 +139,11 @@ class FirebasePlanningRepository: PlanningRepository {
     private func addUserToRoom(roomName: String, session: SessionRoom, username: String) -> Observable<Void> {
         
         var users = session.users
-        users.append(username)
+        if !users.contains(username) {
+            users.append(username)
+        }
         
-        let data: [String: Any] = ["users": users]
+        let data: [String: Any] = ["users": users, "id": roomName]
         
         return self.firestore
             .collection("rooms")

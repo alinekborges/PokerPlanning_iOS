@@ -12,6 +12,7 @@ import Swinject
 
 enum AppAction {
     case finishUsername
+    case finishRoom(selected: SessionRoom)
 }
 
 protocol AppActionable: class {
@@ -39,12 +40,12 @@ class AppCoordinator: Coordinator {
     
     func start() {
         
-        self.storage.clear()
+        //self.storage.clear()
         
         if storage.username.isEmpty {
             showUsernameView()
         } else {
-            showMainView()
+            showEnterRoom()
         }
         
 //        if !storage.isLoggedIn {
@@ -70,6 +71,9 @@ extension AppCoordinator: AppActionable {
         switch action {
         case .finishUsername:
             self.showMainView()
+        case .finishRoom(let selected):
+            print("SELECTED ROOM: \(selected)")
+            break   
         }
     }
     
@@ -90,6 +94,12 @@ extension AppCoordinator {
     
     fileprivate func showUsernameView() {
         let view = container.resolve(UsernameView.self)!
+        view.delegate = self
+        self.push(view: view)
+    }
+    
+    fileprivate func showEnterRoom() {
+        let view = container.resolve(EnterRoomView.self)!
         view.delegate = self
         self.push(view: view)
     }

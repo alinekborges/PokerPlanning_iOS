@@ -10,4 +10,10 @@ import Foundation
 
 struct SessionRoom: Codable {
     let users: [String]
+    let id: String
+    
+    init(users: [String] = [], id: String = "Erro!") {
+        self.users = users
+        self.id = id
+    }
 }

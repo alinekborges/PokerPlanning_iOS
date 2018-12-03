@@ -10,10 +10,6 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-protocol UsernameViewDelegate: class {
-    
-}
-
 class UsernameView: UIViewController {
     
     var viewModel: UsernameViewModel!

@@ -12,5 +12,8 @@ import RxSwift
 protocol PlanningRepository {
     
     func setUsername(_ username: String) -> Observable<Void>
+    func allRooms() -> Observable<[SessionRoom]>
+    func enterRoom(_ name: String) -> Observable<SessionRoom>
+    func createRoom(_ name: String) -> Observable<String>
     
 }
