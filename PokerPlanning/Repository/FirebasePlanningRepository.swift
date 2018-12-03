@@ -58,8 +58,8 @@ class FirebasePlanningRepository: PlanningRepository {
             .collection("rooms")
             .document(name)
             .rx
-            .setData(["users": [], "id": name])
-            .map { _ in return name} 
+            .setData(["users": [], "id": name, "currentTask": ""])
+            .map { _ in return name } 
         
     }
     
@@ -87,7 +87,7 @@ class FirebasePlanningRepository: PlanningRepository {
             .collection("rooms")
             .document(name)
             .rx
-            .getDocument()
+            .listen()
             .map(SessionRoom.self)
             .unwrap()
         
@@ -107,7 +107,8 @@ class FirebasePlanningRepository: PlanningRepository {
     
     func addTask(_ name: String, room: String) -> Observable<String> {
         
-        let data = ["description": name]
+        let data: [String: Any] = ["description": name,
+                    "completed": false]
         
         return self.firestore
             .collection("rooms")
@@ -116,7 +117,35 @@ class FirebasePlanningRepository: PlanningRepository {
             .rx
             .addDocument(data: data)
             .map { $0.documentID }
+            .flatMap { self.setCurrentTask(room: room, task: $0) }
         
+    }
+    
+    //Enter a task and leave username there for counting
+    func enterTask(_ taskID: String, room: String) -> Observable<Void> {
+        
+        return self.firestore
+            .collection("rooms")
+            .document(room)
+            .collection("tasks")
+            .document(taskID)
+            .collection("votes")
+            .document(self.username)
+            .rx
+            .setData(["username": self.username], merge: true)
+            .map { _ in () }
+    }
+    
+    func listenTask(_ taskID: String, roomID: String) -> Observable<Task> {
+        return self.firestore
+            .collection("rooms")
+            .document(roomID)
+            .collection("tasks")
+            .document(taskID)
+            .rx
+            .listen()
+            .map(Task.self)
+            .unwrap()
     }
     
     func addVote(toTask taskID: String, room: String, vote: Int) -> Observable<Void> {
@@ -131,7 +160,26 @@ class FirebasePlanningRepository: PlanningRepository {
             .rx
             .setData(["vote": vote, "username": self.username])
             .map { _ in () }
+    }
+    
+    func completeTask(_ taskID: String, roomID: String, vote: Int) -> Observable<Void> {
         
+        return self.firestore
+            .collection("rooms")
+            .document(roomID)
+            .rx
+            .setData(["currentTask": ""], merge: true)
+            .flatMap {
+                return self.firestore
+                    .collection("rooms")
+                    .document(roomID)
+                    .collection("tasks")
+                    .document(taskID)
+                    .rx
+                    .updateData(["completed": true, "vote": vote])
+                    .map { _ in () }
+        }
+
     }
     
     func listenVotes(task: String, room: String) -> Observable<[Vote]> {
@@ -174,6 +222,17 @@ class FirebasePlanningRepository: PlanningRepository {
             .document(roomName)
             .rx
             .setData(data, merge: true)
+        
+    }
+    
+    private func setCurrentTask(room: String, task: String) -> Observable<String> {
+        
+        return self.firestore
+            .collection("rooms")
+            .document(room)
+            .rx
+            .setData(["currentTask": task], merge: true)
+            .map { _ in return task }
         
     }
     

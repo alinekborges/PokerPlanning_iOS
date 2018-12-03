@@ -13,6 +13,7 @@ class SessionRoomViewModel {
     
     let users: Driver<[String]>
     let tasks: Driver<[Task]>
+    let currentTask: Driver<String>
     
     init(roomID: String, repository: PlanningRepository) {
         
@@ -25,5 +26,9 @@ class SessionRoomViewModel {
         self.tasks = repository.getTasks(forRoomID: roomID)
             .debug("tasks")
             .asDriver(onErrorJustReturn: [])
+        
+        self.currentTask = room
+            .map { $0.currentTask }
+            .asDriver(onErrorJustReturn: "")
     }
 }

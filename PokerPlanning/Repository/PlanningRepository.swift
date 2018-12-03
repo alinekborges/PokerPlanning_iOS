@@ -18,5 +18,10 @@ protocol PlanningRepository {
     func listenRoom(_ name: String) -> Observable<SessionRoom>
     func getTasks(forRoomID id: String) -> Observable<[Task]>
     func addTask(_ name: String, room: String) -> Observable<String>
+    func listenVotes(task: String, room: String) -> Observable<[Vote]>
+    func addVote(toTask taskID: String, room: String, vote: Int) -> Observable<Void>
+    func enterTask(_ taskID: String, room: String) -> Observable<Void>
+    func completeTask(_ taskID: String, roomID: String, vote: Int) -> Observable<Void>
+    func listenTask(_ taskID: String, roomID: String) -> Observable<Task>
     
 }

@@ -71,6 +71,14 @@ extension SessionRoomView {
             self?.delegate?.handle(.newTask)
         }.disposed(by: rx.disposeBag)
         
+        self.viewModel.currentTask
+            .drive(onNext: { [weak self] task in
+                //TODO: show alert before going to other screen
+                if !task.isEmpty {
+                    self?.delegate?.handle(.voting(taskID: task))
+                }
+            }).disposed(by: rx.disposeBag)
+        
     }
 }
 

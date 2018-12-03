@@ -11,11 +11,11 @@ import Foundation
 struct SessionRoom: Codable {
     let users: [String]
     let id: String
-    let currentTask: String?
+    let currentTask: String
     
     init(users: [String] = [], id: String = "Erro!") {
         self.users = users
         self.id = id
-        self.currentTask = nil
+        self.currentTask = ""
     }
 }

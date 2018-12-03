@@ -61,7 +61,7 @@ extension NewTaskView {
     func setupBindings() {
         self.viewModel.onSuccess
             .drive(onNext: { [weak self] id in
-                //self?.delegate?.handle(.finishRoom(selected: selected))
+                self?.delegate?.handle(.voting(taskID: id))
             }).disposed(by: rx.disposeBag)
         
         self.viewModel.onError

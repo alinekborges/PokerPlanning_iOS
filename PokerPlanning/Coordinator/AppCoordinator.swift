@@ -14,6 +14,8 @@ enum AppAction {
     case finishUsername
     case finishRoom(selected: SessionRoom)
     case newTask
+    case voting(taskID: String)
+    case finishVoting
 }
 
 protocol AppActionable: class {
@@ -79,6 +81,10 @@ extension AppCoordinator: AppActionable {
             self.currentRoom = selected.id
         case .newTask:
             showNewTask()
+        case .voting(let taskID):
+            showVotingTask(task: taskID)
+        case .finishVoting:
+            self.navigationController.popViewController(animated: true)
         }
     }
     
@@ -117,6 +123,12 @@ extension AppCoordinator {
     
     fileprivate func showNewTask() {
         let view = NewTaskView(roomID: self.currentRoom)
+        view.delegate = self
+        self.push(view: view)
+    }
+    
+    fileprivate func showVotingTask(task: String) {
+        let view = VotingTaskView(roomID: self.currentRoom, taskID: task)
         view.delegate = self
         self.push(view: view)
     }

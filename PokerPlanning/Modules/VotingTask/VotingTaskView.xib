@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="VotingTaskView" customModule="PokerPlanning" customModuleProvider="target">
+            <connections>
+                <outlet property="finishButton" destination="cpv-uX-QHs" id="pkz-71-92P"/>
+                <outlet property="tableView" destination="DyV-2B-OXz" id="VMV-1D-LrM"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Descrição" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ul5-Ia-ipb">
+                    <rect key="frame" x="30" y="54" width="315" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="TBt-yj-anJ">
+                    <rect key="frame" x="30" y="96" width="315" height="45"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Tp-OA-CDF">
+                            <rect key="frame" x="0.0" y="0.0" width="92.5" height="45"/>
+                            <color key="backgroundColor" white="0.94079088184931503" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <state key="normal" title="1"/>
+                            <connections>
+                                <action selector="voteTap:" destination="-1" eventType="touchUpInside" id="q11-0Y-leB"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bpn-b6-app">
+                            <rect key="frame" x="98.5" y="0.0" width="93" height="45"/>
+                            <color key="backgroundColor" white="0.94079088180000003" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <state key="normal" title="3"/>
+                            <connections>
+                                <action selector="voteTap:" destination="-1" eventType="touchUpInside" id="67v-8N-LkW"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qsD-0g-7ta">
+                            <rect key="frame" x="197.5" y="0.0" width="117.5" height="45"/>
+                            <color key="backgroundColor" white="0.94079088180000003" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <state key="normal" title="5"/>
+                            <connections>
+                                <action selector="voteTap:" destination="-1" eventType="touchUpInside" id="ybu-MC-gCx"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="IeJ-K0-22W"/>
+                    </constraints>
+                </stackView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="DyV-2B-OXz">
+                    <rect key="frame" x="30" y="207" width="315" height="357"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cpv-uX-QHs">
+                    <rect key="frame" x="30" y="601" width="315" height="46"/>
+                    <color key="backgroundColor" red="0.098039215690000001" green="0.66274509800000003" blue="0.21960784310000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="46" id="ceF-0z-tYa"/>
+                    </constraints>
+                    <state key="normal" title="Finish voting">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="voteTaskTap:" destination="-1" eventType="touchUpInside" id="enI-r4-Zw4"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="ul5-Ia-ipb" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="34" id="BVK-BO-qtf"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="DyV-2B-OXz" secondAttribute="trailing" constant="30" id="CQ0-70-oFW"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="cpv-uX-QHs" secondAttribute="bottom" constant="20" id="D8t-ta-scq"/>
+                <constraint firstItem="TBt-yj-anJ" firstAttribute="leading" secondItem="ul5-Ia-ipb" secondAttribute="leading" id="LnE-Sf-sT3"/>
+                <constraint firstItem="TBt-yj-anJ" firstAttribute="trailing" secondItem="ul5-Ia-ipb" secondAttribute="trailing" id="NDs-Ge-25j"/>
+                <constraint firstItem="cpv-uX-QHs" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="Ocp-IQ-TKX"/>
+                <constraint firstItem="cpv-uX-QHs" firstAttribute="top" secondItem="DyV-2B-OXz" secondAttribute="bottom" constant="37" id="Oqf-fN-PXd"/>
+                <constraint firstItem="DyV-2B-OXz" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="UPo-gd-9So"/>
+                <constraint firstItem="ul5-Ia-ipb" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="WxV-KV-uDt"/>
+                <constraint firstItem="TBt-yj-anJ" firstAttribute="top" secondItem="ul5-Ia-ipb" secondAttribute="bottom" constant="21.5" id="ltL-gQ-7Bo"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="cpv-uX-QHs" secondAttribute="trailing" constant="30" id="mvB-Us-zG1"/>
+                <constraint firstItem="DyV-2B-OXz" firstAttribute="top" secondItem="TBt-yj-anJ" secondAttribute="bottom" constant="66" id="wrR-32-twd"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ul5-Ia-ipb" secondAttribute="trailing" constant="30" id="zBK-a5-erk"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="53.600000000000001" y="48.125937031484263"/>
+        </view>
+    </objects>
+</document>

@@ -56,6 +56,9 @@
 		AD502EBC21B4E1E300EEC965 /* NewTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD502EB921B4E1E300EEC965 /* NewTaskView.swift */; };
 		AD502EBD21B4E1E300EEC965 /* NewTaskViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD502EBA21B4E1E300EEC965 /* NewTaskViewModel.swift */; };
 		AD502EBE21B4E1E300EEC965 /* NewTaskView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD502EBB21B4E1E300EEC965 /* NewTaskView.xib */; };
+		AD502EC321B4EA1800EEC965 /* VotingTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD502EC021B4EA1800EEC965 /* VotingTaskView.swift */; };
+		AD502EC421B4EA1800EEC965 /* VotingTaskViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD502EC121B4EA1800EEC965 /* VotingTaskViewModel.swift */; };
+		AD502EC521B4EA1800EEC965 /* VotingTaskView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD502EC221B4EA1800EEC965 /* VotingTaskView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -133,6 +136,9 @@
 		AD502EB921B4E1E300EEC965 /* NewTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTaskView.swift; sourceTree = "<group>"; };
 		AD502EBA21B4E1E300EEC965 /* NewTaskViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTaskViewModel.swift; sourceTree = "<group>"; };
 		AD502EBB21B4E1E300EEC965 /* NewTaskView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewTaskView.xib; sourceTree = "<group>"; };
+		AD502EC021B4EA1800EEC965 /* VotingTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VotingTaskView.swift; sourceTree = "<group>"; };
+		AD502EC121B4EA1800EEC965 /* VotingTaskViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VotingTaskViewModel.swift; sourceTree = "<group>"; };
+		AD502EC221B4EA1800EEC965 /* VotingTaskView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VotingTaskView.xib; sourceTree = "<group>"; };
 		B3BBB82BC6ABEE0BE030FDE6 /* Pods-PokerPlanning.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PokerPlanning.release.xcconfig"; path = "Pods/Target Support Files/Pods-PokerPlanning/Pods-PokerPlanning.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -261,6 +267,7 @@
 		6B0A2C92211A335E0047A450 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				AD502EBF21B4EA0600EEC965 /* VotingTask */,
 				AD502EB821B4E1CB00EEC965 /* NewTask */,
 				AD502EAD21B4DB4B00EEC965 /* Components */,
 				AD502EA621B4DB0400EEC965 /* SesionRoom */,
@@ -403,6 +410,16 @@
 			path = NewTask;
 			sourceTree = "<group>";
 		};
+		AD502EBF21B4EA0600EEC965 /* VotingTask */ = {
+			isa = PBXGroup;
+			children = (
+				AD502EC021B4EA1800EEC965 /* VotingTaskView.swift */,
+				AD502EC121B4EA1800EEC965 /* VotingTaskViewModel.swift */,
+				AD502EC221B4EA1800EEC965 /* VotingTaskView.xib */,
+			);
+			path = VotingTask;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -511,6 +528,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD502EC521B4EA1800EEC965 /* VotingTaskView.xib in Resources */,
 				AD502EA521B4CACA00EEC965 /* EnterRoomView.xib in Resources */,
 				AD502EBE21B4E1E300EEC965 /* NewTaskView.xib in Resources */,
 				6B830A8B211BA1CA003BFFC3 /* .swiftlint.yml in Resources */,
@@ -652,6 +670,7 @@
 				AD502EBD21B4E1E300EEC965 /* NewTaskViewModel.swift in Sources */,
 				6B830A92211C71CE003BFFC3 /* AppCoordinator.swift in Sources */,
 				AD502EB721B4DF1400EEC965 /* Colors.swift in Sources */,
+				AD502EC421B4EA1800EEC965 /* VotingTaskViewModel.swift in Sources */,
 				6B921051212234F300E214FD /* Rx+Utils.swift in Sources */,
 				AD502EB321B4DB6200EEC965 /* ToastView.swift in Sources */,
 				AD502E8C21B4892000EEC965 /* PlanningRepository.swift in Sources */,
@@ -677,6 +696,7 @@
 				AD502E9B21B4C2F000EEC965 /* UsernameViewModel.swift in Sources */,
 				6B818D74211F2C2900C9B53D /* LoginViewModel.swift in Sources */,
 				6B818D6D211F29C800C9B53D /* LocalStorageImpl.swift in Sources */,
+				AD502EC321B4EA1800EEC965 /* VotingTaskView.swift in Sources */,
 				AD502EB121B4DB5A00EEC965 /* LoadingView.swift in Sources */,
 				AD502EA321B4CACA00EEC965 /* EnterRoomView.swift in Sources */,
 				6B830A90211C71BB003BFFC3 /* Coordinator.swift in Sources */,
