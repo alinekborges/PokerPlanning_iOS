@@ -13,6 +13,7 @@ struct LocalStorageKeys {
     private init() {}
     
     static let username = "username"
+    static let currentRoom = "current_room"
 }
 
 class LocalStorageImpl: LocalStorage {
@@ -28,6 +29,14 @@ class LocalStorageImpl: LocalStorage {
             return userDefaults.string(forKey: LocalStorageKeys.username) ?? ""
         } set {
             userDefaults.set(newValue, forKey: LocalStorageKeys.username)
+        }
+    }
+    
+    var currentRoom: String {
+        get {
+            return userDefaults.string(forKey: LocalStorageKeys.currentRoom) ?? ""
+        } set {
+            userDefaults.set(newValue, forKey: LocalStorageKeys.currentRoom)
         }
     }
     

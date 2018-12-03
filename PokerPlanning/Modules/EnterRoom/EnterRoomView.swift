@@ -18,6 +18,8 @@ class EnterRoomView: UIViewController {
     
     weak var delegate: AppActionable?
     
+    let loading = DefaultLoadingView()
+    
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var newRoomButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
@@ -56,6 +58,12 @@ extension EnterRoomView {
     
     func configureViews() {
         self.tableView.register(SessionTableViewCell.self, forCellReuseIdentifier: "cell")
+        let gesture = UITapGestureRecognizer(target: self, action: #selector(self.closeKeyboard(_:)))
+        self.view.addGestureRecognizer(gesture)
+    }
+    
+    @objc func closeKeyboard(_ sender: Any) {
+        self.view.endEditing(true)
     }
     
     func setupBindings() {
@@ -72,11 +80,27 @@ extension EnterRoomView {
                 self?.delegate?.handle(.finishRoom(selected: selected))
             }).disposed(by: rx.disposeBag)
         
+        self.viewModel.validRoomName
+            .drive(self.newRoomButton.rx.isUserInteractionEnabled)
+            .disposed(by: rx.disposeBag)
+        
+        self.viewModel.validRoomName
+            .map { $0 ? 1.0 : 0.4 }
+            .drive(self.newRoomButton.rx.alpha)
+            .disposed(by: rx.disposeBag)
+        
         self.viewModel.onError
             .drive(onNext: { [weak self] error in
                 self?.showAlert(title: "Error!", message: error)
             }).disposed(by: rx.disposeBag)
         
+        self.viewModel.isLoading
+            .drive(self.loading.rx.isLoading)
+            .disposed(by: rx.disposeBag)
+        
+        self.newRoomButton.rx.tap.bind { [weak self] in
+            self?.view.endEditing(true)
+        }.disposed(by: rx.disposeBag)
     }
 }
 

@@ -34,7 +34,7 @@ class AppCoordinator: Coordinator {
     
     var currentRoom: String = ""
     
-    var navigationController = UINavigationController()
+    var navigationController = CustomNavigationController()
     
     init(window: UIWindow, container: Container) {
         self.window = window
@@ -44,20 +44,18 @@ class AppCoordinator: Coordinator {
     }
     
     func start() {
-        
+
         //self.storage.clear()
         
         if storage.username.isEmpty {
             showUsernameView()
+        } else if storage.currentRoom.isEmpty {
+            showEnterRoom()
         } else {
             showEnterRoom()
+            //showSessionRoom(id: storage.currentRoom)
         }
-        
-//        if !storage.isLoggedIn {
-//            showOnboarding()
-//        } else {
-//            showMainView()
-//        }
+
     }
     
     func push(view: UIViewController) {
@@ -66,6 +64,7 @@ class AppCoordinator: Coordinator {
         } else {
             self.navigationController.pushViewController(view, animated: true)
         }
+        view.title = ""
     }
 
 }
@@ -75,7 +74,7 @@ extension AppCoordinator: AppActionable {
     func handle(_ action: AppAction) {
         switch action {
         case .finishUsername:
-            self.showMainView()
+            self.showEnterRoom()
         case .finishRoom(let selected):
             showSessionRoom(id: selected.id)
             self.currentRoom = selected.id

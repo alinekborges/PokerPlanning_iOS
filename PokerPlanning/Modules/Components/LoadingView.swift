@@ -8,6 +8,8 @@
 
 import Foundation
 import UIKit
+import RxSwift
+import RxCocoa
 
 internal final class DefaultLoadingView: UIVisualEffectView {
     
@@ -61,4 +63,18 @@ internal final class DefaultLoadingView: UIVisualEffectView {
         self.pinEdgesToSuperview()
         topController.layoutIfNeeded()
     }
+}
+
+extension Reactive where Base: DefaultLoadingView {
+    
+    var isLoading: Binder<Bool> {
+        return Binder(self.base) { view, isLoading in
+            if isLoading {
+                view.start()
+            } else {
+                view.stop()
+            }
+        }
+    }
+    
 }

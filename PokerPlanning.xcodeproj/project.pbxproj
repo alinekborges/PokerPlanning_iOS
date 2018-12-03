@@ -59,6 +59,10 @@
 		AD502EC321B4EA1800EEC965 /* VotingTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD502EC021B4EA1800EEC965 /* VotingTaskView.swift */; };
 		AD502EC421B4EA1800EEC965 /* VotingTaskViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD502EC121B4EA1800EEC965 /* VotingTaskViewModel.swift */; };
 		AD502EC521B4EA1800EEC965 /* VotingTaskView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD502EC221B4EA1800EEC965 /* VotingTaskView.xib */; };
+		AD502EC721B54C5600EEC965 /* OrangeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD502EC621B54C5600EEC965 /* OrangeButton.swift */; };
+		AD502EC921B54CE600EEC965 /* UIView+Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD502EC821B54CE600EEC965 /* UIView+Gradient.swift */; };
+		AD502ECB21B54F7A00EEC965 /* OrangeTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD502ECA21B54F7A00EEC965 /* OrangeTextField.swift */; };
+		AD502ECD21B5535100EEC965 /* CustomNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD502ECC21B5535100EEC965 /* CustomNavigationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -139,6 +143,10 @@
 		AD502EC021B4EA1800EEC965 /* VotingTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VotingTaskView.swift; sourceTree = "<group>"; };
 		AD502EC121B4EA1800EEC965 /* VotingTaskViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VotingTaskViewModel.swift; sourceTree = "<group>"; };
 		AD502EC221B4EA1800EEC965 /* VotingTaskView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VotingTaskView.xib; sourceTree = "<group>"; };
+		AD502EC621B54C5600EEC965 /* OrangeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrangeButton.swift; sourceTree = "<group>"; };
+		AD502EC821B54CE600EEC965 /* UIView+Gradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Gradient.swift"; sourceTree = "<group>"; };
+		AD502ECA21B54F7A00EEC965 /* OrangeTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrangeTextField.swift; sourceTree = "<group>"; };
+		AD502ECC21B5535100EEC965 /* CustomNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationController.swift; sourceTree = "<group>"; };
 		B3BBB82BC6ABEE0BE030FDE6 /* Pods-PokerPlanning.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PokerPlanning.release.xcconfig"; path = "Pods/Target Support Files/Pods-PokerPlanning/Pods-PokerPlanning.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -298,6 +306,7 @@
 				6B921050212234F300E214FD /* Rx+Utils.swift */,
 				6B9210522122390E00E214FD /* NSObject+Rx.swift */,
 				AD502E9D21B4C8A400EEC965 /* UIViewController+Alert.swift */,
+				AD502EC821B54CE600EEC965 /* UIView+Gradient.swift */,
 			);
 			path = RxExtensions;
 			sourceTree = "<group>";
@@ -396,6 +405,9 @@
 				AD502EB221B4DB6200EEC965 /* ToastView.swift */,
 				AD502EB421B4DDB500EEC965 /* UIView+Constraints.swift */,
 				AD502EB021B4DB5A00EEC965 /* LoadingView.swift */,
+				AD502EC621B54C5600EEC965 /* OrangeButton.swift */,
+				AD502ECA21B54F7A00EEC965 /* OrangeTextField.swift */,
+				AD502ECC21B5535100EEC965 /* CustomNavigationController.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -680,18 +692,22 @@
 				6B818D6B211F29BD00C9B53D /* LocalStorage.swift in Sources */,
 				6B830A9A211C82D0003BFFC3 /* OnboardingViewModel.swift in Sources */,
 				6B818D7A211F2CA400C9B53D /* MainViewModel.swift in Sources */,
+				AD502ECD21B5535100EEC965 /* CustomNavigationController.swift in Sources */,
+				AD502ECB21B54F7A00EEC965 /* OrangeTextField.swift in Sources */,
 				6B830AA1211C87DE003BFFC3 /* DefaultContainer+Views.swift in Sources */,
 				AD502EBC21B4E1E300EEC965 /* NewTaskView.swift in Sources */,
 				AD502E8E21B4893100EEC965 /* FirebasePlanningRepository.swift in Sources */,
 				AD502E9321B498A300EEC965 /* SessionRoom.swift in Sources */,
 				AD502E9A21B4C2F000EEC965 /* UsernameView.swift in Sources */,
 				6B0A2C62211A200A0047A450 /* AppDelegate.swift in Sources */,
+				AD502EC921B54CE600EEC965 /* UIView+Gradient.swift in Sources */,
 				AD502EB521B4DDB500EEC965 /* UIView+Constraints.swift in Sources */,
 				AD502EAB21B4DB1900EEC965 /* SessionRoomViewModel.swift in Sources */,
 				6B818D73211F2C2900C9B53D /* LoginView.swift in Sources */,
 				AD502E9021B4965800EEC965 /* RxFirestore.swift in Sources */,
 				6B818D7D211F2F2300C9B53D /* MainCoordinator.swift in Sources */,
 				AD502E9E21B4C8A400EEC965 /* UIViewController+Alert.swift in Sources */,
+				AD502EC721B54C5600EEC965 /* OrangeButton.swift in Sources */,
 				6B830A9D211C8313003BFFC3 /* DefaultContainer.swift in Sources */,
 				AD502E9B21B4C2F000EEC965 /* UsernameViewModel.swift in Sources */,
 				6B818D74211F2C2900C9B53D /* LoginViewModel.swift in Sources */,

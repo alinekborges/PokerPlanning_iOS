@@ -9,12 +9,14 @@
 import RxSwift
 import RxCocoa
 import RxSwiftExt
+import RxSwiftUtilities
 
 class UsernameViewModel {
     
     let validUsername: Driver<Bool>
     let onSuccess: Driver<Void>
     let onError: Driver<String>
+    let isLoading: Driver<Bool>
     
     init(repository: PlanningRepository, username: Observable<String>, loginTap: Observable<Void>) {
         
@@ -24,12 +26,16 @@ class UsernameViewModel {
         self.validUsername = isusernameValid
             .asDriver(onErrorJustReturn: false)
         
+        let activityIndicator = ActivityIndicator()
+        self.isLoading = activityIndicator.asDriver()
+        
         let result = loginTap
             .withLatestFrom(validUsername)
             .filter { $0 }
             .withLatestFrom(username)
             .flatMap {
                 repository.setUsername($0)
+                .trackActivity(activityIndicator)
                 .materialize()
         }.share()
         

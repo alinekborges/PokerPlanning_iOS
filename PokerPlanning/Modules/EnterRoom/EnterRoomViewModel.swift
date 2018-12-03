@@ -8,6 +8,7 @@
 
 import RxSwift
 import RxCocoa
+import RxSwiftUtilities
 
 class EnterRoomViewModel {
     
@@ -15,6 +16,7 @@ class EnterRoomViewModel {
     let validRoomName: Driver<Bool>
     let onSuccess: Driver<SessionRoom>
     let onError: Driver<String>
+    let isLoading: Driver<Bool>
     
     init(repository: PlanningRepository,
          roomName: Observable<String>,
@@ -32,11 +34,17 @@ class EnterRoomViewModel {
         self.validRoomName = isRoomnameValid
             .asDriver(onErrorJustReturn: false)
         
+        let indicator = ActivityIndicator()
+        self.isLoading = indicator.asDriver()
+        
         let newRoom = buttonTap
             .withLatestFrom(validRoomName)
             .filter { $0 }
             .withLatestFrom(roomName)
-            .flatMap(repository.createRoom)
+            .flatMap {
+                repository.createRoom($0)
+                    .trackActivity(indicator)
+        }
         
         let selected = selectedRoom.map { $0.id }
         

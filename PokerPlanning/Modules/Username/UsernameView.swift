@@ -17,6 +17,8 @@ class UsernameView: UIViewController {
     
     weak var delegate: AppActionable?
     
+    let loadingView = DefaultLoadingView()
+    
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var loginButton: UIButton!
     
@@ -51,7 +53,7 @@ extension UsernameView {
     }
     
     func configureViews() {
-        
+        self.usernameTextField.becomeFirstResponder()
     }
     
     func setupBindings() {
@@ -60,9 +62,17 @@ extension UsernameView {
                 self.delegate?.handle(.finishUsername)
             }).disposed(by: rx.disposeBag)
         
+        self.loginButton.rx.tap.bind { [weak self] in
+            self?.usernameTextField.resignFirstResponder()
+        }.disposed(by: rx.disposeBag)
+        
         self.viewModel.onError
             .drive(onNext: { [weak self] error in
                 self?.showAlert(title: "Error!", message: error)
             }).disposed(by: rx.disposeBag)
+        
+        self.viewModel.isLoading
+            .drive(self.loadingView.rx.isLoading)
+            .disposed(by: rx.disposeBag)
     }
 }

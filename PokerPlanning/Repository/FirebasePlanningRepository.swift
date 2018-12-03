@@ -77,7 +77,7 @@ class FirebasePlanningRepository: PlanningRepository {
                                           session: session,
                                           username: self.storage.username)
                     .map { _ in session}
-        }
+            }.do(onNext: { _ in self.storage.currentRoom = name })
             
     }
     

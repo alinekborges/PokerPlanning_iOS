@@ -26,7 +26,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             print(user?.uid)
         }
         
-        print(Auth.auth().currentUser?.uid)
+        self.window?.tintColor = #colorLiteral(red: 0.9995236993, green: 0.4772071242, blue: 0.479349196, alpha: 1)
         
         self.defaultContainer = DefaultContainer()
         

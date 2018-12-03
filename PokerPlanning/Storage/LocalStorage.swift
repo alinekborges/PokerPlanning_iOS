@@ -11,6 +11,7 @@ import RxSwift
 
 protocol LocalStorage: class {
     var username: String { get set }
+    var currentRoom: String { get set }
     
     func clear()
 }
