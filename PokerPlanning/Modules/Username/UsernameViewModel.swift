@@ -30,8 +30,8 @@ class UsernameViewModel {
             .withLatestFrom(username)
             .flatMap {
                 repository.setUsername($0)
-        }.materialize()
-        .share()
+                .materialize()
+        }.share()
         
         self.onSuccess = result
             .elements()

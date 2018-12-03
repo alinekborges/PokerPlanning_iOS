@@ -45,6 +45,17 @@
 		AD502EA321B4CACA00EEC965 /* EnterRoomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD502EA021B4CACA00EEC965 /* EnterRoomView.swift */; };
 		AD502EA421B4CACA00EEC965 /* EnterRoomViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD502EA121B4CACA00EEC965 /* EnterRoomViewModel.swift */; };
 		AD502EA521B4CACA00EEC965 /* EnterRoomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD502EA221B4CACA00EEC965 /* EnterRoomView.xib */; };
+		AD502EAA21B4DB1900EEC965 /* SessionRoomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD502EA721B4DB1900EEC965 /* SessionRoomView.swift */; };
+		AD502EAB21B4DB1900EEC965 /* SessionRoomViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD502EA821B4DB1900EEC965 /* SessionRoomViewModel.swift */; };
+		AD502EAC21B4DB1900EEC965 /* SessionRoomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD502EA921B4DB1900EEC965 /* SessionRoomView.xib */; };
+		AD502EAF21B4DB5400EEC965 /* CloudTagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD502EAE21B4DB5400EEC965 /* CloudTagView.swift */; };
+		AD502EB121B4DB5A00EEC965 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD502EB021B4DB5A00EEC965 /* LoadingView.swift */; };
+		AD502EB321B4DB6200EEC965 /* ToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD502EB221B4DB6200EEC965 /* ToastView.swift */; };
+		AD502EB521B4DDB500EEC965 /* UIView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD502EB421B4DDB500EEC965 /* UIView+Constraints.swift */; };
+		AD502EB721B4DF1400EEC965 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD502EB621B4DF1400EEC965 /* Colors.swift */; };
+		AD502EBC21B4E1E300EEC965 /* NewTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD502EB921B4E1E300EEC965 /* NewTaskView.swift */; };
+		AD502EBD21B4E1E300EEC965 /* NewTaskViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD502EBA21B4E1E300EEC965 /* NewTaskViewModel.swift */; };
+		AD502EBE21B4E1E300EEC965 /* NewTaskView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD502EBB21B4E1E300EEC965 /* NewTaskView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,6 +122,17 @@
 		AD502EA021B4CACA00EEC965 /* EnterRoomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterRoomView.swift; sourceTree = "<group>"; };
 		AD502EA121B4CACA00EEC965 /* EnterRoomViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterRoomViewModel.swift; sourceTree = "<group>"; };
 		AD502EA221B4CACA00EEC965 /* EnterRoomView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EnterRoomView.xib; sourceTree = "<group>"; };
+		AD502EA721B4DB1900EEC965 /* SessionRoomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionRoomView.swift; sourceTree = "<group>"; };
+		AD502EA821B4DB1900EEC965 /* SessionRoomViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionRoomViewModel.swift; sourceTree = "<group>"; };
+		AD502EA921B4DB1900EEC965 /* SessionRoomView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SessionRoomView.xib; sourceTree = "<group>"; };
+		AD502EAE21B4DB5400EEC965 /* CloudTagView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloudTagView.swift; sourceTree = "<group>"; };
+		AD502EB021B4DB5A00EEC965 /* LoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		AD502EB221B4DB6200EEC965 /* ToastView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToastView.swift; sourceTree = "<group>"; };
+		AD502EB421B4DDB500EEC965 /* UIView+Constraints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Constraints.swift"; sourceTree = "<group>"; };
+		AD502EB621B4DF1400EEC965 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		AD502EB921B4E1E300EEC965 /* NewTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTaskView.swift; sourceTree = "<group>"; };
+		AD502EBA21B4E1E300EEC965 /* NewTaskViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTaskViewModel.swift; sourceTree = "<group>"; };
+		AD502EBB21B4E1E300EEC965 /* NewTaskView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewTaskView.xib; sourceTree = "<group>"; };
 		B3BBB82BC6ABEE0BE030FDE6 /* Pods-PokerPlanning.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PokerPlanning.release.xcconfig"; path = "Pods/Target Support Files/Pods-PokerPlanning/Pods-PokerPlanning.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -239,6 +261,9 @@
 		6B0A2C92211A335E0047A450 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				AD502EB821B4E1CB00EEC965 /* NewTask */,
+				AD502EAD21B4DB4B00EEC965 /* Components */,
+				AD502EA621B4DB0400EEC965 /* SesionRoom */,
 				AD502E9F21B4CAA200EEC965 /* EnterRoom */,
 				AD502E9621B4C2D600EEC965 /* Username */,
 				6B818D6F211F2AF700C9B53D /* Login */,
@@ -253,6 +278,7 @@
 			children = (
 				6B0A2C68211A20110047A450 /* Assets.xcassets */,
 				6B3E7CD3212DA9500042AE85 /* GoogleService-Info.plist */,
+				AD502EB621B4DF1400EEC965 /* Colors.swift */,
 			);
 			name = Resources;
 			path = "New Group";
@@ -344,6 +370,37 @@
 				AD502EA221B4CACA00EEC965 /* EnterRoomView.xib */,
 			);
 			path = EnterRoom;
+			sourceTree = "<group>";
+		};
+		AD502EA621B4DB0400EEC965 /* SesionRoom */ = {
+			isa = PBXGroup;
+			children = (
+				AD502EA721B4DB1900EEC965 /* SessionRoomView.swift */,
+				AD502EA821B4DB1900EEC965 /* SessionRoomViewModel.swift */,
+				AD502EA921B4DB1900EEC965 /* SessionRoomView.xib */,
+			);
+			path = SesionRoom;
+			sourceTree = "<group>";
+		};
+		AD502EAD21B4DB4B00EEC965 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				AD502EAE21B4DB5400EEC965 /* CloudTagView.swift */,
+				AD502EB221B4DB6200EEC965 /* ToastView.swift */,
+				AD502EB421B4DDB500EEC965 /* UIView+Constraints.swift */,
+				AD502EB021B4DB5A00EEC965 /* LoadingView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		AD502EB821B4E1CB00EEC965 /* NewTask */ = {
+			isa = PBXGroup;
+			children = (
+				AD502EB921B4E1E300EEC965 /* NewTaskView.swift */,
+				AD502EBA21B4E1E300EEC965 /* NewTaskViewModel.swift */,
+				AD502EBB21B4E1E300EEC965 /* NewTaskView.xib */,
+			);
+			path = NewTask;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -455,7 +512,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD502EA521B4CACA00EEC965 /* EnterRoomView.xib in Resources */,
+				AD502EBE21B4E1E300EEC965 /* NewTaskView.xib in Resources */,
 				6B830A8B211BA1CA003BFFC3 /* .swiftlint.yml in Resources */,
+				AD502EAC21B4DB1900EEC965 /* SessionRoomView.xib in Resources */,
 				6B830A9B211C82D0003BFFC3 /* OnboardingView.xib in Resources */,
 				6B0A2C6C211A20110047A450 /* LaunchScreen.storyboard in Resources */,
 				6B818D7B211F2CA400C9B53D /* MainView.xib in Resources */,
@@ -590,19 +649,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD502EBD21B4E1E300EEC965 /* NewTaskViewModel.swift in Sources */,
 				6B830A92211C71CE003BFFC3 /* AppCoordinator.swift in Sources */,
+				AD502EB721B4DF1400EEC965 /* Colors.swift in Sources */,
 				6B921051212234F300E214FD /* Rx+Utils.swift in Sources */,
+				AD502EB321B4DB6200EEC965 /* ToastView.swift in Sources */,
 				AD502E8C21B4892000EEC965 /* PlanningRepository.swift in Sources */,
+				AD502EAA21B4DB1900EEC965 /* SessionRoomView.swift in Sources */,
 				6B818D79211F2CA400C9B53D /* MainView.swift in Sources */,
 				AD502EA421B4CACA00EEC965 /* EnterRoomViewModel.swift in Sources */,
 				6B818D6B211F29BD00C9B53D /* LocalStorage.swift in Sources */,
 				6B830A9A211C82D0003BFFC3 /* OnboardingViewModel.swift in Sources */,
 				6B818D7A211F2CA400C9B53D /* MainViewModel.swift in Sources */,
 				6B830AA1211C87DE003BFFC3 /* DefaultContainer+Views.swift in Sources */,
+				AD502EBC21B4E1E300EEC965 /* NewTaskView.swift in Sources */,
 				AD502E8E21B4893100EEC965 /* FirebasePlanningRepository.swift in Sources */,
 				AD502E9321B498A300EEC965 /* SessionRoom.swift in Sources */,
 				AD502E9A21B4C2F000EEC965 /* UsernameView.swift in Sources */,
 				6B0A2C62211A200A0047A450 /* AppDelegate.swift in Sources */,
+				AD502EB521B4DDB500EEC965 /* UIView+Constraints.swift in Sources */,
+				AD502EAB21B4DB1900EEC965 /* SessionRoomViewModel.swift in Sources */,
 				6B818D73211F2C2900C9B53D /* LoginView.swift in Sources */,
 				AD502E9021B4965800EEC965 /* RxFirestore.swift in Sources */,
 				6B818D7D211F2F2300C9B53D /* MainCoordinator.swift in Sources */,
@@ -611,8 +677,10 @@
 				AD502E9B21B4C2F000EEC965 /* UsernameViewModel.swift in Sources */,
 				6B818D74211F2C2900C9B53D /* LoginViewModel.swift in Sources */,
 				6B818D6D211F29C800C9B53D /* LocalStorageImpl.swift in Sources */,
+				AD502EB121B4DB5A00EEC965 /* LoadingView.swift in Sources */,
 				AD502EA321B4CACA00EEC965 /* EnterRoomView.swift in Sources */,
 				6B830A90211C71BB003BFFC3 /* Coordinator.swift in Sources */,
+				AD502EAF21B4DB5400EEC965 /* CloudTagView.swift in Sources */,
 				6B830A99211C82D0003BFFC3 /* OnboardingView.swift in Sources */,
 				AD502E9521B4B5AF00EEC965 /* Task.swift in Sources */,
 				6B9210532122390E00E214FD /* NSObject+Rx.swift in Sources */,

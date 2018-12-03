@@ -13,6 +13,7 @@ import Swinject
 enum AppAction {
     case finishUsername
     case finishRoom(selected: SessionRoom)
+    case newTask
 }
 
 protocol AppActionable: class {
@@ -28,6 +29,8 @@ class AppCoordinator: Coordinator {
     }()
     
     var mainCoordinator: MainCoordinator?
+    
+    var currentRoom: String = ""
     
     var navigationController = UINavigationController()
     
@@ -72,8 +75,10 @@ extension AppCoordinator: AppActionable {
         case .finishUsername:
             self.showMainView()
         case .finishRoom(let selected):
-            print("SELECTED ROOM: \(selected)")
-            break   
+            showSessionRoom(id: selected.id)
+            self.currentRoom = selected.id
+        case .newTask:
+            showNewTask()
         }
     }
     
@@ -100,6 +105,18 @@ extension AppCoordinator {
     
     fileprivate func showEnterRoom() {
         let view = container.resolve(EnterRoomView.self)!
+        view.delegate = self
+        self.push(view: view)
+    }
+    
+    fileprivate func showSessionRoom(id: String) {
+        let view = SessionRoomView(roomID: id)
+        view.delegate = self
+        self.push(view: view)
+    }
+    
+    fileprivate func showNewTask() {
+        let view = NewTaskView(roomID: self.currentRoom)
         view.delegate = self
         self.push(view: view)
     }

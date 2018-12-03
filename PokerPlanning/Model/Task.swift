@@ -9,7 +9,11 @@
 import Foundation
 
 struct Task: Codable {
-    let name: String
+    let description: String
+    
+    init(description: String = "") {
+        self.description = description
+    }
 }
 
 struct Vote: Codable {

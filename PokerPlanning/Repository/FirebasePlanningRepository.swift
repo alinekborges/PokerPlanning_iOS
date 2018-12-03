@@ -81,9 +81,33 @@ class FirebasePlanningRepository: PlanningRepository {
             
     }
     
+    func listenRoom(_ name: String) -> Observable<SessionRoom> {
+        
+        return self.firestore
+            .collection("rooms")
+            .document(name)
+            .rx
+            .getDocument()
+            .map(SessionRoom.self)
+            .unwrap()
+        
+    }
+    
+    func getTasks(forRoomID id: String) -> Observable<[Task]> {
+        
+        return self.firestore
+            .collection("rooms")
+            .document(id)
+            .collection("tasks")
+            .rx
+            .getDocuments()
+            .mapArray(Task.self)
+        
+    }
+    
     func addTask(_ name: String, room: String) -> Observable<String> {
         
-        let data = ["name": name]
+        let data = ["description": name]
         
         return self.firestore
             .collection("rooms")
