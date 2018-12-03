@@ -7,4 +7,10 @@
 //
 
 import Foundation
+import RxSwift
 
+protocol PlanningRepository {
+    
+    func setUsername(_ username: String) -> Observable<Void>
+    
+}

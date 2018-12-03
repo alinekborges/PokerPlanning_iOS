@@ -15,7 +15,7 @@ enum AuthError: Error {
     case login
 }
 
-class FirebasePlanningRepository {
+class FirebasePlanningRepository: PlanningRepository {
     
     let firestore: Firestore
     let user: User?
@@ -33,7 +33,7 @@ class FirebasePlanningRepository {
         self.user = user
     }
     
-    func setUsername(_ username: String) -> Observable<Bool> {
+    func setUsername(_ username: String) -> Observable<Void> {
         guard let user = self.user else { return .error(AuthError.login) }
         
         return self.firestore
@@ -42,7 +42,7 @@ class FirebasePlanningRepository {
             .rx
             .setData(["username": username])
             .do(onNext: { self.storage.username = username })
-            .map { _ in return  true }
+            
     }
     
     func enterRoom(_ name: String) -> Observable<SessionRoom> {

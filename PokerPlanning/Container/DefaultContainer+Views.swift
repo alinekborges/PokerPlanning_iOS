@@ -17,12 +17,16 @@ extension DefaultContainer {
             OnboardingView()
         }
         
-        self.container.register(LoginView.self) { resolver in
+        self.container.register(LoginView.self) { _ in
             LoginView()
         }
         
-        self.container.register(MainView.self) { resolver in
+        self.container.register(MainView.self) { _ in
             MainView()
+        }
+        
+        self.container.register(UsernameView.self) { resolver in
+            return UsernameView(repository: resolver.resolve(PlanningRepository.self)!)
         }
 
     }

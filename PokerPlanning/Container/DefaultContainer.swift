@@ -18,6 +18,7 @@ final class DefaultContainer {
         self.container = Container()
         self.registerViews()
         self.registerStorage()
+        self.registerRepository()
     }
     
 }
@@ -29,6 +30,18 @@ extension DefaultContainer {
         
         self.container.register(LocalStorage.self) { _ in
             return LocalStorageImpl()
+        }
+        
+    }
+    
+}
+
+extension DefaultContainer {
+    
+    func registerRepository() {
+        
+        self.container.register(PlanningRepository.self) { _ in
+            return FirebasePlanningRepository()
         }
         
     }
