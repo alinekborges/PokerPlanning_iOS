@@ -19,6 +19,8 @@ class LoginView: UIViewController {
     var viewModel: LoginViewModel!
     
     weak var delegate: LoginViewDelegate?
+    
+    
 
     init() {
         super.init(nibName: String(describing: LoginView.self), bundle: nil)
@@ -49,5 +51,7 @@ extension LoginView {
     
     func setupBindings() {
 
+        
+        
     }
 }

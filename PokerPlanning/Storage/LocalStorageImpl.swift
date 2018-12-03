@@ -12,7 +12,7 @@ import RxSwift
 struct LocalStorageKeys {
     private init() {}
     
-    static let isLoggedIn = "logged_in"
+    static let username = "username"
 }
 
 class LocalStorageImpl: LocalStorage {
@@ -21,19 +21,18 @@ class LocalStorageImpl: LocalStorage {
     
     init(userDefaults: UserDefaults = UserDefaults.standard) {
         self.userDefaults = userDefaults
-        userDefaults.register(defaults: [LocalStorageKeys.isLoggedIn: false])
     }
     
-    var isLoggedIn: Bool {
+    var username: String {
         get {
-            return userDefaults.bool(forKey: LocalStorageKeys.isLoggedIn)
+            return userDefaults.string(forKey: LocalStorageKeys.username) ?? ""
         } set {
-            userDefaults.set(newValue, forKey: LocalStorageKeys.isLoggedIn)
+            userDefaults.set(newValue, forKey: LocalStorageKeys.username)
         }
     }
     
     func clear() {
-        userDefaults.removeObject(forKey: LocalStorageKeys.isLoggedIn)
+        userDefaults.removeObject(forKey: LocalStorageKeys.username)
     }
     
 }

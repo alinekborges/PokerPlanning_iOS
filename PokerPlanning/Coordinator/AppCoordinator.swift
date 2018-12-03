@@ -46,11 +46,13 @@ class AppCoordinator: Coordinator {
     
     func start() {
         
-        if !storage.isLoggedIn {
-            showOnboarding()
-        } else {
-            showMainView()
-        }
+        showOnboarding()
+        
+//        if !storage.isLoggedIn {
+//            showOnboarding()
+//        } else {
+//            showMainView()
+//        }
     }
 
 }

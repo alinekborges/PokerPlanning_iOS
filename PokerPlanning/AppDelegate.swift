@@ -21,6 +21,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         FirebaseApp.configure()
         
+        Auth.auth().signInAnonymously { (result, error) in
+            let user = result?.user
+            print(user?.uid)
+        }
+        
+        print(Auth.auth().currentUser?.uid)
+        
         self.defaultContainer = DefaultContainer()
         
         let currentWindow = UIWindow(frame: UIScreen.main.bounds)

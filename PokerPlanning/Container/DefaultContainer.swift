@@ -8,7 +8,7 @@
 
 import Foundation
 import Swinject
-import Moya
+
 
 final class DefaultContainer {
     
@@ -16,7 +16,6 @@ final class DefaultContainer {
     
     init() {
         self.container = Container()
-        self.registerServices()
         self.registerViews()
         self.registerStorage()
     }

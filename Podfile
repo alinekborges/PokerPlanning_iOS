@@ -6,12 +6,14 @@ def common_pods
   pod 'Swinject'
   pod 'RxSwift'
   pod 'RxCocoa'
-  pod 'Moya/RxSwift'
   pod 'Reusable'
   pod 'SwiftLint'
   pod 'RxSwiftUtilities'
   pod 'RxSwiftExt'
   pod 'Firebase/Core'
+  pod 'Firebase/Auth'
+  pod 'RxFirebase/Firestore'
+  pod 'RxFirebase/Auth'
   
 end
 
