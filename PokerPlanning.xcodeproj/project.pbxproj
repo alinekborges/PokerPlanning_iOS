@@ -147,6 +147,7 @@
 		AD502EC821B54CE600EEC965 /* UIView+Gradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Gradient.swift"; sourceTree = "<group>"; };
 		AD502ECA21B54F7A00EEC965 /* OrangeTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrangeTextField.swift; sourceTree = "<group>"; };
 		AD502ECC21B5535100EEC965 /* CustomNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationController.swift; sourceTree = "<group>"; };
+		AD502ECE21B5B3C300EEC965 /* PokerPlanning.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PokerPlanning.entitlements; sourceTree = "<group>"; };
 		B3BBB82BC6ABEE0BE030FDE6 /* Pods-PokerPlanning.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PokerPlanning.release.xcconfig"; path = "Pods/Target Support Files/Pods-PokerPlanning/Pods-PokerPlanning.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -220,6 +221,7 @@
 		6B0A2C60211A200A0047A450 /* PokerPlanning */ = {
 			isa = PBXGroup;
 			children = (
+				AD502ECE21B5B3C300EEC965 /* PokerPlanning.entitlements */,
 				AD502E9121B4988900EEC965 /* Model */,
 				AD502E8A21B488F200EEC965 /* Repository */,
 				6B0A2C8F211A334B0047A450 /* Coordinator */,
@@ -504,6 +506,11 @@
 				TargetAttributes = {
 					6B0A2C5D211A200A0047A450 = {
 						CreatedOnToolsVersion = 9.4.1;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					6B0A2C71211A20110047A450 = {
 						CreatedOnToolsVersion = 9.4.1;
@@ -885,7 +892,9 @@
 			baseConfigurationReference = 4CC73DA4DE40EEAECAC5DCEF /* Pods-PokerPlanning.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = PokerPlanning/PokerPlanning.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = 68SZERZ856;
 				INFOPLIST_FILE = PokerPlanning/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -893,10 +902,11 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.alinekborges.PokerPlanning;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.alinekborges.poker-planning";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
 		};
@@ -905,7 +915,9 @@
 			baseConfigurationReference = B3BBB82BC6ABEE0BE030FDE6 /* Pods-PokerPlanning.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = PokerPlanning/PokerPlanning.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = 68SZERZ856;
 				INFOPLIST_FILE = PokerPlanning/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -913,10 +925,11 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.alinekborges.PokerPlanning;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.alinekborges.poker-planning";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
 		};

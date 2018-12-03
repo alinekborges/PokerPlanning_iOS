@@ -16,6 +16,7 @@ enum AppAction {
     case newTask
     case voting(taskID: String)
     case finishVoting
+    case leaveSession
 }
 
 protocol AppActionable: class {
@@ -52,8 +53,8 @@ class AppCoordinator: Coordinator {
         } else if storage.currentRoom.isEmpty {
             showEnterRoom()
         } else {
-            showEnterRoom()
-            //showSessionRoom(id: storage.currentRoom)
+            //showEnterRoom()
+            showSessionRoom(id: storage.currentRoom)
         }
 
     }
@@ -84,6 +85,9 @@ extension AppCoordinator: AppActionable {
             showVotingTask(task: taskID)
         case .finishVoting:
             self.navigationController.popViewController(animated: true)
+        case .leaveSession:
+            self.storage.currentRoom = ""
+            self.start()
         }
     }
     

@@ -22,20 +22,20 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pks-qt-XUd">
-                    <rect key="frame" x="30" y="109" width="315" height="30"/>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pks-qt-XUd" customClass="OrangeTextField" customModule="PokerPlanning" customModuleProvider="target">
+                    <rect key="frame" x="30" y="93" width="315" height="30"/>
                     <nil key="textColor"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter the task description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gHg-8a-Bb6">
-                    <rect key="frame" x="30" y="57" width="197" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Descreva a tarefa aqui" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gHg-8a-Bb6">
+                    <rect key="frame" x="30" y="32" width="232.5" height="30"/>
+                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="25"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nbY-Vv-2er">
-                    <rect key="frame" x="30" y="170" width="315" height="46"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nbY-Vv-2er" customClass="OrangeButton" customModule="PokerPlanning" customModuleProvider="target">
+                    <rect key="frame" x="30" y="154" width="315" height="46"/>
                     <color key="backgroundColor" red="0.098039215690000001" green="0.66274509800000003" blue="0.21960784310000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="46" id="YFY-kh-30t"/>
@@ -48,7 +48,7 @@
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="nbY-Vv-2er" firstAttribute="trailing" secondItem="pks-qt-XUd" secondAttribute="trailing" id="AfU-0n-KyH"/>
-                <constraint firstItem="gHg-8a-Bb6" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="37" id="Bnh-F0-VIB"/>
+                <constraint firstItem="gHg-8a-Bb6" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="12" id="Bnh-F0-VIB"/>
                 <constraint firstItem="nbY-Vv-2er" firstAttribute="leading" secondItem="pks-qt-XUd" secondAttribute="leading" id="CpN-oi-9pP"/>
                 <constraint firstItem="nbY-Vv-2er" firstAttribute="top" secondItem="pks-qt-XUd" secondAttribute="bottom" constant="31" id="Qnb-Es-zKs"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="nbY-Vv-2er" secondAttribute="trailing" constant="30" id="YAm-nL-MoY"/>

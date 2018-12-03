@@ -51,6 +51,7 @@ class EnterRoomViewModel {
         let result = Observable.merge(newRoom, selected)
             .flatMap {
                 repository.enterRoom($0)
+                .trackActivity(indicator)
                 .materialize()
             }.share()
         

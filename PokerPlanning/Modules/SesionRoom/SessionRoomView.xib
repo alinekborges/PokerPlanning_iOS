@@ -15,6 +15,7 @@
                 <outlet property="cloudView" destination="AEf-dK-SER" id="hh8-eN-eFw"/>
                 <outlet property="newTaskButton" destination="nsK-M4-Ji2" id="Fm1-cv-tGa"/>
                 <outlet property="tableView" destination="qfi-IS-Csx" id="dsT-ty-jLa"/>
+                <outlet property="titleLabel" destination="pxF-xr-opp" id="PfO-2K-4zA"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -24,39 +25,64 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AEf-dK-SER" customClass="CloudTagView" customModule="PokerPlanning" customModuleProvider="target">
-                    <rect key="frame" x="30" y="62" width="315" height="156"/>
+                    <rect key="frame" x="30" y="90" width="315" height="80"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="156" id="WQD-Mq-l6k"/>
+                        <constraint firstAttribute="height" constant="80" id="WQD-Mq-l6k"/>
                     </constraints>
                 </view>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qfi-IS-Csx">
-                    <rect key="frame" x="30" y="237" width="315" height="345"/>
+                    <rect key="frame" x="30" y="211" width="315" height="371"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </tableView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nsK-M4-Ji2">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nsK-M4-Ji2" customClass="OrangeButton" customModule="PokerPlanning" customModuleProvider="target">
                     <rect key="frame" x="30" y="601" width="315" height="46"/>
                     <color key="backgroundColor" red="0.098039215690000001" green="0.66274509800000003" blue="0.21960784310000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="46" id="6R2-NV-RX4"/>
                     </constraints>
-                    <state key="normal" title="New task">
+                    <state key="normal" title="Nova tarefa">
                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
                 </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pxF-xr-opp">
+                    <rect key="frame" x="30" y="32" width="315" height="30"/>
+                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="25"/>
+                    <color key="textColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Online agora:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fz2-sm-Ghh">
+                    <rect key="frame" x="30" y="68" width="90" height="18"/>
+                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Tarefas:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mUy-6r-JNF">
+                    <rect key="frame" x="30" y="178" width="315" height="30"/>
+                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="25"/>
+                    <color key="textColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="pxF-xr-opp" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="12" id="5ga-57-u9h"/>
+                <constraint firstItem="qfi-IS-Csx" firstAttribute="top" secondItem="mUy-6r-JNF" secondAttribute="bottom" constant="3" id="9fb-Dy-lKE"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="pxF-xr-opp" secondAttribute="trailing" constant="30" id="BiP-GT-uwg"/>
+                <constraint firstItem="mUy-6r-JNF" firstAttribute="top" secondItem="AEf-dK-SER" secondAttribute="bottom" constant="8" id="FGi-4U-41T"/>
                 <constraint firstItem="qfi-IS-Csx" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="H82-19-C1v"/>
+                <constraint firstItem="fz2-sm-Ghh" firstAttribute="leading" secondItem="pxF-xr-opp" secondAttribute="leading" id="KnS-8e-FQW"/>
+                <constraint firstItem="pxF-xr-opp" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="KpV-M5-wL6"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="qfi-IS-Csx" secondAttribute="trailing" constant="30" id="LYz-sc-WWe"/>
                 <constraint firstItem="AEf-dK-SER" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="Leq-D6-kSl"/>
+                <constraint firstItem="mUy-6r-JNF" firstAttribute="leading" secondItem="AEf-dK-SER" secondAttribute="leading" id="PHl-47-wT5"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="nsK-M4-Ji2" secondAttribute="trailing" constant="30" id="RaL-5e-RjT"/>
-                <constraint firstItem="qfi-IS-Csx" firstAttribute="top" secondItem="AEf-dK-SER" secondAttribute="bottom" constant="19" id="Rng-WJ-Azt"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="AEf-dK-SER" secondAttribute="trailing" constant="30" id="WCz-wL-OFn"/>
+                <constraint firstItem="AEf-dK-SER" firstAttribute="top" secondItem="fz2-sm-Ghh" secondAttribute="bottom" constant="4" id="XWw-C8-m4l"/>
                 <constraint firstItem="nsK-M4-Ji2" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="fni-Px-J23"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="nsK-M4-Ji2" secondAttribute="bottom" constant="20" id="kRs-s6-L83"/>
                 <constraint firstItem="nsK-M4-Ji2" firstAttribute="top" secondItem="qfi-IS-Csx" secondAttribute="bottom" constant="19" id="s65-nD-uw1"/>
-                <constraint firstItem="AEf-dK-SER" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="42" id="vqv-0L-Vxg"/>
+                <constraint firstItem="fz2-sm-Ghh" firstAttribute="top" secondItem="pxF-xr-opp" secondAttribute="bottom" constant="6" id="vNb-hD-sYh"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="53.600000000000001" y="48.125937031484263"/>

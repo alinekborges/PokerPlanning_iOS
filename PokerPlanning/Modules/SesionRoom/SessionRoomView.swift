@@ -22,6 +22,7 @@ class SessionRoomView: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var cloudView: CloudTagView!
     @IBOutlet weak var newTaskButton: UIButton!
+    @IBOutlet weak var titleLabel: UILabel!
     
     init(roomID: String, repository: PlanningRepository = FirebasePlanningRepository()) {
         self.repository = repository
@@ -52,6 +53,13 @@ extension SessionRoomView {
         self.cloudView.tagBackgroundColor = .slate
         self.cloudView.textColor = .white
         self.tableView.register(TaskTableViewCell.self, forCellReuseIdentifier: "cell")
+        self.titleLabel.text = self.roomID
+        
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Sair", style: .plain, target: self, action: #selector(self.leaveSession(_:)))
+    }
+    
+    @objc func leaveSession(_ sender: Any) {
+        self.delegate?.handle(.leaveSession)
     }
     
     func setupBindings() {
@@ -64,7 +72,6 @@ extension SessionRoomView {
                 .items(cellIdentifier: "cell",
                        cellType: UITableViewCell.self)) { _, element, cell in
                         cell.textLabel?.text = element.description
-                        //cell.detailTextLabel?.text = "Final vote: \(element.name)"
             }.disposed(by: rx.disposeBag)
         
         self.newTaskButton.rx.tap.bind { [weak self] _ in
