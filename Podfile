@@ -14,6 +14,7 @@ def common_pods
   pod 'Firebase/Auth'
   pod 'RxFirebase/Firestore'
   pod 'RxFirebase/Auth'
+  pod 'TouchVisualizer', '~>3.0.0'
   
 end
 

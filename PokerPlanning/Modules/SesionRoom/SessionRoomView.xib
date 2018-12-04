@@ -25,14 +25,14 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AEf-dK-SER" customClass="CloudTagView" customModule="PokerPlanning" customModuleProvider="target">
-                    <rect key="frame" x="30" y="90" width="315" height="80"/>
+                    <rect key="frame" x="30" y="90" width="315" height="100"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="80" id="WQD-Mq-l6k"/>
+                        <constraint firstAttribute="height" constant="100" id="WQD-Mq-l6k"/>
                     </constraints>
                 </view>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qfi-IS-Csx">
-                    <rect key="frame" x="30" y="211" width="315" height="371"/>
+                    <rect key="frame" x="30" y="231" width="315" height="351"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </tableView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nsK-M4-Ji2" customClass="OrangeButton" customModule="PokerPlanning" customModuleProvider="target">

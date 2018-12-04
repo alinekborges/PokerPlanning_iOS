@@ -129,6 +129,7 @@ PODS:
     - RxSwift (~> 4.0)
   - SwiftLint (0.29.1)
   - Swinject (2.5.0)
+  - TouchVisualizer (3.0.2)
 
 DEPENDENCIES:
   - Firebase/Auth
@@ -142,6 +143,7 @@ DEPENDENCIES:
   - RxSwiftUtilities
   - SwiftLint
   - Swinject
+  - TouchVisualizer (~> 3.0.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -170,6 +172,7 @@ SPEC REPOS:
     - RxSwiftUtilities
     - SwiftLint
     - Swinject
+    - TouchVisualizer
 
 SPEC CHECKSUMS:
   BoringSSL: e10f92a27043805c01071fe815a5cd98ae8212e7
@@ -197,7 +200,8 @@ SPEC CHECKSUMS:
   RxSwiftUtilities: b486df7454cc867c3ea626ce24110511159e7044
   SwiftLint: 6772320e40b52049053a518c17db9b0634a0b45a
   Swinject: 82cdb851f63f91bba974e3eca1d69780f2f7677e
+  TouchVisualizer: dfdb77c26f1efc58d9980596742de6cf115ea37e
 
-PODFILE CHECKSUM: d178c77fcc6095fa6fde55cad02b661cf8af85a0
+PODFILE CHECKSUM: c723238317313b113c0a0934ac02a5e184435b57
 
 COCOAPODS: 1.5.3

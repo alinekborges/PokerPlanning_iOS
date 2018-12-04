@@ -18,7 +18,7 @@ enum AuthError: Error {
 class FirebasePlanningRepository: PlanningRepository {
     
     let firestore: Firestore
-    let user: User?
+    var user: User? { return Auth.auth().currentUser }
     let storage: LocalStorage
     
     var username: String {
@@ -26,11 +26,9 @@ class FirebasePlanningRepository: PlanningRepository {
     }
     
     init(firestore: Firestore = Firestore.firestore(),
-         user: User? = Auth.auth().currentUser,
          storage: LocalStorage = LocalStorageImpl()) {
         self.storage = storage
         self.firestore = firestore
-        self.user = user
     }
     
     func setUsername(_ username: String) -> Observable<Void> {

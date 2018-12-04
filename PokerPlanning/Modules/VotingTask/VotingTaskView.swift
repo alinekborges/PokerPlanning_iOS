@@ -65,9 +65,8 @@ class VotingTaskView: UIViewController {
     @IBAction func voteTaskTap(_ sender: Any) {
         //TODO: show confirmation view 
         self.viewModel.completeTask(vote: currentVote)
-            .subscribe(onNext: { [weak self] _ in
-                //self?.delegate?.handle(.finishVoting)
-            }).disposed(by: rx.disposeBag)
+            .subscribe()
+            .disposed(by: rx.disposeBag)
     }
     
 }
@@ -102,24 +101,30 @@ extension VotingTaskView {
             .disposed(by: rx.disposeBag)
         
         self.viewModel.finishEnabled
-            .map { $0 ? 1.0 : 0.4 }
+            .map { $0 ? 1.0 : 0.0 }
             .drive(self.finishButton.rx.alpha)
             .disposed(by: rx.disposeBag)
         
         self.viewModel.votingClosed
             .subscribe(onNext: { [weak self] in
-                self?.delegate?.handle(.finishVoting)
+                self?.finishVoting()
             }, onError: { error in
                 print(error.localizedDescription)
             }).disposed(by: rx.disposeBag)
         
         self.viewModel.didVote
-            .drive(onNext: { _ in
-                print("voted!!")
-            }).disposed(by: rx.disposeBag)
+            .drive()
+            .disposed(by: rx.disposeBag)
         
         self.viewModel.title
             .drive(self.descriptionLabel.rx.text)
             .disposed(by: rx.disposeBag)
+    }
+    
+    func finishVoting() {
+        let alert = AlertView(title: "Votação finalizada! Nota final: \(self.currentVote)") {
+            self.delegate?.handle(.finishVoting)
+        }
+        self.present(alert, animated: true, completion: nil)
     }
 }

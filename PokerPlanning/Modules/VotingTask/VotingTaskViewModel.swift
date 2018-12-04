@@ -39,7 +39,9 @@ class VotingTaskViewModel {
             .map { !$0 }
         
         self.finishEnabled = votesArray
+            .map { $0.map { $0.vote } }
             .map { $0.allEqual() }
+            .withLatestFrom(votingCompleted) { $0 && $1 }
             .asDriver(onErrorJustReturn: false)
         
         self.votingCompleted = votingCompleted
