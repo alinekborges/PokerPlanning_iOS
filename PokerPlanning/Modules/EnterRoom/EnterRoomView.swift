@@ -57,7 +57,10 @@ extension EnterRoomView {
     }
     
     func configureViews() {
-        self.tableView.register(SessionTableViewCell.self, forCellReuseIdentifier: "cell")
+        self.tableView.register(UINib(nibName: "SessionCell", bundle: Bundle.main), forCellReuseIdentifier: "cell")
+        self.tableView.rowHeight = 100
+        self.tableView.separatorStyle = .none
+        //self.tableView.register(SessionCell.self, forCellReuseIdentifier: "cell")
         //let gesture = UITapGestureRecognizer(target: self, action: #selector(self.closeKeyboard(_:)))
         //self.view.addGestureRecognizer(gesture)
     }
@@ -70,9 +73,8 @@ extension EnterRoomView {
         self.viewModel.rooms
             .drive(self.tableView.rx
                 .items(cellIdentifier: "cell",
-                       cellType: UITableViewCell.self)) { _, element, cell in
-                cell.textLabel?.text = element.id
-                cell.detailTextLabel?.text = "Users: \(element.users.count)"
+                       cellType: SessionCell.self)) { _, element, cell in
+                    cell.bind(element)
             }.disposed(by: rx.disposeBag)
         
         self.viewModel.onSuccess

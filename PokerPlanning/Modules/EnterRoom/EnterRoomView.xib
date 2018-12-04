@@ -23,8 +23,8 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ctj-1B-IVv">
-                    <rect key="frame" x="0.0" y="293" width="375" height="374"/>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ctj-1B-IVv">
+                    <rect key="frame" x="30" y="293" width="315" height="374"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </tableView>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZHt-Fg-B6p" customClass="OrangeTextField" customModule="PokerPlanning" customModuleProvider="target">
@@ -55,14 +55,14 @@
                 <constraint firstItem="Ctj-1B-IVv" firstAttribute="top" secondItem="A7D-pp-Aed" secondAttribute="bottom" constant="40" id="2c1-AX-Pua"/>
                 <constraint firstItem="ZHt-Fg-B6p" firstAttribute="top" secondItem="Kj5-1T-XOL" secondAttribute="bottom" constant="31" id="68F-Dn-hgk"/>
                 <constraint firstItem="ZHt-Fg-B6p" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="7Uc-Ij-5yA"/>
-                <constraint firstItem="Ctj-1B-IVv" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="DvA-R5-Ac8"/>
+                <constraint firstItem="Ctj-1B-IVv" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" constant="-30" id="DvA-R5-Ac8"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ZHt-Fg-B6p" secondAttribute="trailing" constant="30" id="T24-Sy-rtp"/>
                 <constraint firstItem="Ctj-1B-IVv" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="UCB-BJ-Agr"/>
                 <constraint firstItem="Kj5-1T-XOL" firstAttribute="trailing" secondItem="ZHt-Fg-B6p" secondAttribute="trailing" id="UMT-78-EQ9"/>
                 <constraint firstItem="A7D-pp-Aed" firstAttribute="top" secondItem="ZHt-Fg-B6p" secondAttribute="bottom" constant="31" id="WZ3-RY-g8F"/>
                 <constraint firstItem="A7D-pp-Aed" firstAttribute="trailing" secondItem="ZHt-Fg-B6p" secondAttribute="trailing" id="Xbn-tO-uYJ"/>
                 <constraint firstItem="Kj5-1T-XOL" firstAttribute="leading" secondItem="ZHt-Fg-B6p" secondAttribute="leading" id="bGo-ag-gC2"/>
-                <constraint firstItem="Ctj-1B-IVv" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="bMJ-cl-ZWC"/>
+                <constraint firstItem="Ctj-1B-IVv" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="bMJ-cl-ZWC"/>
                 <constraint firstItem="A7D-pp-Aed" firstAttribute="leading" secondItem="ZHt-Fg-B6p" secondAttribute="leading" id="dbj-Lu-ZgQ"/>
                 <constraint firstItem="Kj5-1T-XOL" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="29" id="jIu-qq-sj8"/>
             </constraints>

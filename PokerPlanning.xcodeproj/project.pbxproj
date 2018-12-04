@@ -64,6 +64,9 @@
 		AD502ECB21B54F7A00EEC965 /* OrangeTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD502ECA21B54F7A00EEC965 /* OrangeTextField.swift */; };
 		AD502ECD21B5535100EEC965 /* CustomNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD502ECC21B5535100EEC965 /* CustomNavigationController.swift */; };
 		AD502ED021B5E93500EEC965 /* VotingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD502ECF21B5E93500EEC965 /* VotingButton.swift */; };
+		ADC3E4B821B6151200FFB922 /* SessionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC3E4B621B6151200FFB922 /* SessionCell.swift */; };
+		ADC3E4B921B6151200FFB922 /* SessionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADC3E4B721B6151200FFB922 /* SessionCell.xib */; };
+		ADC3E4BB21B6156300FFB922 /* MaterialCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC3E4BA21B6156300FFB922 /* MaterialCardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -150,6 +153,9 @@
 		AD502ECC21B5535100EEC965 /* CustomNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationController.swift; sourceTree = "<group>"; };
 		AD502ECE21B5B3C300EEC965 /* PokerPlanning.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PokerPlanning.entitlements; sourceTree = "<group>"; };
 		AD502ECF21B5E93500EEC965 /* VotingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VotingButton.swift; sourceTree = "<group>"; };
+		ADC3E4B621B6151200FFB922 /* SessionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionCell.swift; sourceTree = "<group>"; };
+		ADC3E4B721B6151200FFB922 /* SessionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SessionCell.xib; sourceTree = "<group>"; };
+		ADC3E4BA21B6156300FFB922 /* MaterialCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialCardView.swift; sourceTree = "<group>"; };
 		B3BBB82BC6ABEE0BE030FDE6 /* Pods-PokerPlanning.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PokerPlanning.release.xcconfig"; path = "Pods/Target Support Files/Pods-PokerPlanning/Pods-PokerPlanning.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -385,6 +391,7 @@
 		AD502E9F21B4CAA200EEC965 /* EnterRoom */ = {
 			isa = PBXGroup;
 			children = (
+				ADC3E4B521B6144100FFB922 /* SessionCell */,
 				AD502EA021B4CACA00EEC965 /* EnterRoomView.swift */,
 				AD502EA121B4CACA00EEC965 /* EnterRoomViewModel.swift */,
 				AD502EA221B4CACA00EEC965 /* EnterRoomView.xib */,
@@ -405,6 +412,7 @@
 		AD502EAD21B4DB4B00EEC965 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				ADC3E4BA21B6156300FFB922 /* MaterialCardView.swift */,
 				AD502EAE21B4DB5400EEC965 /* CloudTagView.swift */,
 				AD502EB221B4DB6200EEC965 /* ToastView.swift */,
 				AD502EB421B4DDB500EEC965 /* UIView+Constraints.swift */,
@@ -435,6 +443,15 @@
 				AD502EC221B4EA1800EEC965 /* VotingTaskView.xib */,
 			);
 			path = VotingTask;
+			sourceTree = "<group>";
+		};
+		ADC3E4B521B6144100FFB922 /* SessionCell */ = {
+			isa = PBXGroup;
+			children = (
+				ADC3E4B621B6151200FFB922 /* SessionCell.swift */,
+				ADC3E4B721B6151200FFB922 /* SessionCell.xib */,
+			);
+			path = SessionCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -556,6 +573,7 @@
 				6B830A8B211BA1CA003BFFC3 /* .swiftlint.yml in Resources */,
 				AD502EAC21B4DB1900EEC965 /* SessionRoomView.xib in Resources */,
 				6B830A9B211C82D0003BFFC3 /* OnboardingView.xib in Resources */,
+				ADC3E4B921B6151200FFB922 /* SessionCell.xib in Resources */,
 				6B0A2C6C211A20110047A450 /* LaunchScreen.storyboard in Resources */,
 				6B818D7B211F2CA400C9B53D /* MainView.xib in Resources */,
 				AD502E9C21B4C2F000EEC965 /* UsernameView.xib in Resources */,
@@ -704,6 +722,7 @@
 				6B830A9A211C82D0003BFFC3 /* OnboardingViewModel.swift in Sources */,
 				6B818D7A211F2CA400C9B53D /* MainViewModel.swift in Sources */,
 				AD502ECD21B5535100EEC965 /* CustomNavigationController.swift in Sources */,
+				ADC3E4B821B6151200FFB922 /* SessionCell.swift in Sources */,
 				AD502ECB21B54F7A00EEC965 /* OrangeTextField.swift in Sources */,
 				6B830AA1211C87DE003BFFC3 /* DefaultContainer+Views.swift in Sources */,
 				AD502EBC21B4E1E300EEC965 /* NewTaskView.swift in Sources */,
@@ -729,6 +748,7 @@
 				6B830A90211C71BB003BFFC3 /* Coordinator.swift in Sources */,
 				AD502EAF21B4DB5400EEC965 /* CloudTagView.swift in Sources */,
 				6B830A99211C82D0003BFFC3 /* OnboardingView.swift in Sources */,
+				ADC3E4BB21B6156300FFB922 /* MaterialCardView.swift in Sources */,
 				AD502E9521B4B5AF00EEC965 /* Task.swift in Sources */,
 				6B9210532122390E00E214FD /* NSObject+Rx.swift in Sources */,
 			);
