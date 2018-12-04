@@ -17,6 +17,7 @@ enum AppAction {
     case voting(taskID: String)
     case finishVoting
     case leaveSession
+    case back
 }
 
 protocol AppActionable: class {
@@ -53,13 +54,15 @@ class AppCoordinator: Coordinator {
         } else if storage.currentRoom.isEmpty {
             showEnterRoom()
         } else {
-            //showEnterRoom()
-            showSessionRoom(id: storage.currentRoom)
+            //FIX
+            showEnterRoom()
+            //showSessionRoom(id: storage.currentRoom)
         }
 
     }
     
     func push(view: UIViewController) {
+        
         if self.navigationController.viewControllers.isEmpty {
             self.navigationController.viewControllers = [view]
         } else {
@@ -84,10 +87,15 @@ extension AppCoordinator: AppActionable {
         case .voting(let taskID):
             showVotingTask(task: taskID)
         case .finishVoting:
-            self.navigationController.popViewController(animated: true)
+            self.navigationController.dismiss(animated: true, completion: nil)
+            if navigationController.topViewController is NewTaskView {
+                navigationController.popViewController(animated: false)
+            }
         case .leaveSession:
             self.storage.currentRoom = ""
             self.start()
+        case .back:
+            self.navigationController.popViewController(animated: false)
         }
     }
     
@@ -133,7 +141,7 @@ extension AppCoordinator {
     fileprivate func showVotingTask(task: String) {
         let view = VotingTaskView(roomID: self.currentRoom, taskID: task)
         view.delegate = self
-        self.push(view: view)
+        self.navigationController.present(view, animated: true, completion: nil)
     }
     
 }

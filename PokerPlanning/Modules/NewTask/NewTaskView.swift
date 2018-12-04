@@ -61,12 +61,21 @@ extension NewTaskView {
     func setupBindings() {
         self.viewModel.onSuccess
             .drive(onNext: { [weak self] id in
-                self?.delegate?.handle(.voting(taskID: id))
+                self?.delegate?.handle(.back)
             }).disposed(by: rx.disposeBag)
         
         self.viewModel.onError
             .drive(onNext: { [weak self] error in
                 self?.showAlert(title: "Error!", message: error)
             }).disposed(by: rx.disposeBag)
+        
+        self.viewModel.validTaskName
+            .drive(self.button.rx.isUserInteractionEnabled)
+            .disposed(by: rx.disposeBag)
+        
+        self.viewModel.validTaskName
+            .map { $0 ? 1.0 : 0.4 }
+            .drive(self.button.rx.alpha)
+            .disposed(by: rx.disposeBag)
     }
 }

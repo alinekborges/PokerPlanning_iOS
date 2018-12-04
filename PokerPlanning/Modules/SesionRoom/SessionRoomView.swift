@@ -55,7 +55,11 @@ extension SessionRoomView {
         self.tableView.register(TaskTableViewCell.self, forCellReuseIdentifier: "cell")
         self.titleLabel.text = self.roomID
         
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Sair", style: .plain, target: self, action: #selector(self.leaveSession(_:)))
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(
+            title: "Sair",
+            style: .plain,
+            target: self,
+            action: #selector(self.leaveSession(_:)))
     }
     
     @objc func leaveSession(_ sender: Any) {
@@ -82,7 +86,12 @@ extension SessionRoomView {
             .drive(onNext: { [weak self] task in
                 //TODO: show alert before going to other screen
                 if !task.isEmpty {
-                    self?.delegate?.handle(.voting(taskID: task))
+                    //self?.delegate?.handle(.voting(taskID: task))
+                    print("go to task")
+                    self?.showAlert(title: "Task", message: "task", completion: { _ in
+                        self?.delegate?.handle(.voting(taskID: task))
+                    })
+                    
                 }
             }).disposed(by: rx.disposeBag)
         

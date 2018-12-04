@@ -24,6 +24,7 @@ class VotingTaskView: UIViewController {
     
     @IBOutlet weak var finishButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet var votingButtons: [VotingButton]!
     
     let vote = PublishSubject<Int>()
     
@@ -50,10 +51,12 @@ class VotingTaskView: UIViewController {
             }).disposed(by: rx.disposeBag)
     }
     
-    @IBAction func voteTap(_ sender: UIButton) {
+    @IBAction func voteTap(_ sender: VotingButton) {
         if let text = sender.titleLabel?.text, let vote = Int(text) {
             self.vote.onNext(vote)
             self.currentVote = vote
+            self.votingButtons.forEach { $0.setState(false) }
+            sender.setState(true)
         }
     }
     
@@ -79,6 +82,7 @@ extension VotingTaskView {
     
     func configureViews() {
         self.tableView.register(VoteTableViewCell.self, forCellReuseIdentifier: "cell")
+        
     }
     
     func setupBindings() {
@@ -93,7 +97,6 @@ extension VotingTaskView {
                         }
 
                         cell.textLabel?.text = "\(voteString) - \(element.username)"
-                        //cell.detailTextLabel?.text = "Final vote: \(element.name)"
             }.disposed(by: rx.disposeBag)
         
         self.viewModel.votingCompleted

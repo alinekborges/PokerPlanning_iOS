@@ -21,9 +21,10 @@ class NewTaskViewModel {
          buttonTap: Observable<Void>) {
         
         let isTaskValid = taskDescription
-            .map { $0.count > 3 }
+            .map { $0.count > 2 }
         
         self.validTaskName = isTaskValid
+            .debug("isValid")
             .asDriver(onErrorJustReturn: false)
         
         let result = buttonTap

@@ -46,7 +46,7 @@ class EnterRoomViewModel {
                     .trackActivity(indicator)
         }
         
-        let selected = selectedRoom.map { $0.id }
+        let selected = selectedRoom.map { $0.id }.debug("selected")
         
         let result = Observable.merge(newRoom, selected)
             .flatMap {

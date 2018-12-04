@@ -65,6 +65,8 @@ class FirebasePlanningRepository: PlanningRepository {
     
     func enterRoom(_ name: String) -> Observable<SessionRoom> {
         
+        if name.isEmpty { fatalError("room string is empty") }
+        
         return self.firestore
             .collection("rooms")
             .document(name)
@@ -93,14 +95,14 @@ class FirebasePlanningRepository: PlanningRepository {
         
     }
     
-    func getTasks(forRoomID id: String) -> Observable<[Task]> {
+    func listenTasks(forRoomID id: String) -> Observable<[Task]> {
         
         return self.firestore
             .collection("rooms")
             .document(id)
             .collection("tasks")
             .rx
-            .getDocuments()
+            .listen()
             .mapArray(Task.self)
         
     }

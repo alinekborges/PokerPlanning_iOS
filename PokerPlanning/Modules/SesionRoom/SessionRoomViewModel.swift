@@ -23,7 +23,7 @@ class SessionRoomViewModel {
         self.users = room.map { $0.users }
             .asDriver(onErrorJustReturn: [])
         
-        self.tasks = repository.getTasks(forRoomID: roomID)
+        self.tasks = repository.listenTasks(forRoomID: roomID)
             .debug("tasks")
             .asDriver(onErrorJustReturn: [])
         
