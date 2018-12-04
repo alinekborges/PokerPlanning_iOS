@@ -24,6 +24,8 @@ class VotingTaskView: UIViewController {
     
     @IBOutlet weak var finishButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var descriptionLabel: UILabel!
+    
     @IBOutlet var votingButtons: [VotingButton]!
     
     let vote = PublishSubject<Int>()
@@ -81,7 +83,9 @@ extension VotingTaskView {
     }
     
     func configureViews() {
-        self.tableView.register(VoteTableViewCell.self, forCellReuseIdentifier: "cell")
+        self.tableView.register(UINib(nibName: "VoteCell", bundle: Bundle.main), forCellReuseIdentifier: "cell")
+        self.tableView.rowHeight = 52
+        self.tableView.separatorStyle = .none
         
     }
     
@@ -89,14 +93,8 @@ extension VotingTaskView {
         self.viewModel.votes
             .drive(self.tableView.rx
                 .items(cellIdentifier: "cell",
-                       cellType: UITableViewCell.self)) { _, element, cell in
-                        var voteString = "???"
-                        
-                        if let vote = element.vote {
-                            voteString = String(vote)
-                        }
-
-                        cell.textLabel?.text = "\(voteString) - \(element.username)"
+                       cellType: VoteCell.self)) { _, element, cell in
+                        cell.bind(element)
             }.disposed(by: rx.disposeBag)
         
         self.viewModel.votingCompleted
@@ -119,21 +117,9 @@ extension VotingTaskView {
             .drive(onNext: { _ in
                 print("voted!!")
             }).disposed(by: rx.disposeBag)
+        
+        self.viewModel.title
+            .drive(self.descriptionLabel.rx.text)
+            .disposed(by: rx.disposeBag)
     }
-}
-
-class VoteTableViewCell: UITableViewCell {
-    
-    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-        super.init(style: .subtitle, reuseIdentifier: reuseIdentifier)
-    }
-    
-    init() {
-        super.init(style: .subtitle, reuseIdentifier: "cell")
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
 }

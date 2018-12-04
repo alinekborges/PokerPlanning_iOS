@@ -15,6 +15,7 @@ class VotingTaskViewModel {
     let didVote: Driver<Bool>
     let votingCompleted: Driver<Bool>
     let votingClosed: Observable<Void>
+    let title: Driver<String>
     
     let repository: PlanningRepository
     let roomID: String
@@ -39,9 +40,15 @@ class VotingTaskViewModel {
         self.votingCompleted = votingCompleted
             .asDriver(onErrorJustReturn: false)
         
-        self.votingClosed = repository.listenTask(taskID, roomID: roomID)
+        let currentTask = repository.listenTask(taskID, roomID: roomID)
+        
+        self.votingClosed = currentTask
             .filter { $0.completed }
             .map { _ in () }
+        
+        self.title = currentTask
+            .map { $0.description }
+            .asDriver(onErrorJustReturn: "")
         
         let voteMapper: (([Vote], Bool) -> [Vote]) = { votesArray, votingCompleted in
             return votesArray.map { vote -> Vote in

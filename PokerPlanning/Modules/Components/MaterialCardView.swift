@@ -31,13 +31,13 @@ class MaterialCardView: UIView {
     }
     
     func configureShadow() {
-        self.layer.cornerRadius = 3.0
+        self.layer.cornerRadius = 2.0
         self.layer.shadowColor = UIColor.black.cgColor
         self.layer.shadowOpacity = 0.1
         self.layer.shadowOffset = CGSize(width: 0, height: 2)
-        self.layer.shadowRadius = 4
+        self.layer.shadowRadius = 3
         self.layer.shouldRasterize = false
-        self.backgroundColor = .white
+        self.backgroundColor = #colorLiteral(red: 0.9803921569, green: 0.9803921569, blue: 0.9803921569, alpha: 1)
         self.clipsToBounds = false
     }
     

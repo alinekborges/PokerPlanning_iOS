@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="VotingTaskView" customModule="PokerPlanning" customModuleProvider="target">
             <connections>
+                <outlet property="descriptionLabel" destination="ul5-Ia-ipb" id="NRa-1W-7zC"/>
                 <outlet property="finishButton" destination="cpv-uX-QHs" id="pkz-71-92P"/>
                 <outlet property="tableView" destination="DyV-2B-OXz" id="VMV-1D-LrM"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>

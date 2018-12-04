@@ -20,25 +20,25 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ftj-us-gPP" customClass="MaterialCardView" customModule="PokerPlanning" customModuleProvider="target">
-                        <rect key="frame" x="4" y="4" width="361" height="85.5"/>
+                        <rect key="frame" x="4" y="4" width="361" height="89.5"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Selecione uma sessão ou crie uma nova" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wFo-Le-Gvs">
-                                <rect key="frame" x="12" y="22.5" width="279" height="41"/>
+                                <rect key="frame" x="12" y="24.5" width="279" height="41"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="0jr-aX-nJN">
-                                <rect key="frame" x="291" y="8" width="62" height="69.5"/>
+                                <rect key="frame" x="291" y="8" width="62" height="73.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kf0-ba-9HZ">
-                                        <rect key="frame" x="0.0" y="0.0" width="62" height="50"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="62" height="52.5"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="36"/>
                                         <color key="textColor" red="0.93497949838638306" green="0.50645613670349121" blue="0.49410349130630493" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="usuarios" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tm9-1D-tz2">
-                                        <rect key="frame" x="0.0" y="50" width="62" height="19.5"/>
+                                        <rect key="frame" x="0.0" y="52.5" width="62" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -60,8 +60,9 @@
                         </constraints>
                     </view>
                 </subviews>
+                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
-                    <constraint firstAttribute="bottom" secondItem="ftj-us-gPP" secondAttribute="bottom" constant="8" id="8Dt-pd-UDT"/>
+                    <constraint firstAttribute="bottom" secondItem="ftj-us-gPP" secondAttribute="bottom" constant="4" id="8Dt-pd-UDT"/>
                     <constraint firstItem="ftj-us-gPP" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="4" id="SOc-9O-uag"/>
                     <constraint firstAttribute="trailing" secondItem="ftj-us-gPP" secondAttribute="trailing" constant="4" id="SYu-db-qwI"/>
                     <constraint firstItem="ftj-us-gPP" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="4" id="exq-XS-WIK"/>

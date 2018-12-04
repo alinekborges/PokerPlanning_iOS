@@ -67,6 +67,10 @@
 		ADC3E4B821B6151200FFB922 /* SessionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC3E4B621B6151200FFB922 /* SessionCell.swift */; };
 		ADC3E4B921B6151200FFB922 /* SessionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADC3E4B721B6151200FFB922 /* SessionCell.xib */; };
 		ADC3E4BB21B6156300FFB922 /* MaterialCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC3E4BA21B6156300FFB922 /* MaterialCardView.swift */; };
+		ADC3E4BF21B61A9F00FFB922 /* TaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC3E4BD21B61A9F00FFB922 /* TaskCell.swift */; };
+		ADC3E4C021B61A9F00FFB922 /* TaskCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADC3E4BE21B61A9F00FFB922 /* TaskCell.xib */; };
+		ADC3E4C421B61DB100FFB922 /* VoteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC3E4C221B61DB100FFB922 /* VoteCell.swift */; };
+		ADC3E4C521B61DB100FFB922 /* VoteCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADC3E4C321B61DB100FFB922 /* VoteCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -156,6 +160,10 @@
 		ADC3E4B621B6151200FFB922 /* SessionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionCell.swift; sourceTree = "<group>"; };
 		ADC3E4B721B6151200FFB922 /* SessionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SessionCell.xib; sourceTree = "<group>"; };
 		ADC3E4BA21B6156300FFB922 /* MaterialCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialCardView.swift; sourceTree = "<group>"; };
+		ADC3E4BD21B61A9F00FFB922 /* TaskCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCell.swift; sourceTree = "<group>"; };
+		ADC3E4BE21B61A9F00FFB922 /* TaskCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TaskCell.xib; sourceTree = "<group>"; };
+		ADC3E4C221B61DB100FFB922 /* VoteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteCell.swift; sourceTree = "<group>"; };
+		ADC3E4C321B61DB100FFB922 /* VoteCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VoteCell.xib; sourceTree = "<group>"; };
 		B3BBB82BC6ABEE0BE030FDE6 /* Pods-PokerPlanning.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PokerPlanning.release.xcconfig"; path = "Pods/Target Support Files/Pods-PokerPlanning/Pods-PokerPlanning.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -402,6 +410,7 @@
 		AD502EA621B4DB0400EEC965 /* SesionRoom */ = {
 			isa = PBXGroup;
 			children = (
+				ADC3E4BC21B61A8A00FFB922 /* TaskCell */,
 				AD502EA721B4DB1900EEC965 /* SessionRoomView.swift */,
 				AD502EA821B4DB1900EEC965 /* SessionRoomViewModel.swift */,
 				AD502EA921B4DB1900EEC965 /* SessionRoomView.xib */,
@@ -438,6 +447,7 @@
 		AD502EBF21B4EA0600EEC965 /* VotingTask */ = {
 			isa = PBXGroup;
 			children = (
+				ADC3E4C121B61D9300FFB922 /* VoteCell */,
 				AD502EC021B4EA1800EEC965 /* VotingTaskView.swift */,
 				AD502EC121B4EA1800EEC965 /* VotingTaskViewModel.swift */,
 				AD502EC221B4EA1800EEC965 /* VotingTaskView.xib */,
@@ -452,6 +462,24 @@
 				ADC3E4B721B6151200FFB922 /* SessionCell.xib */,
 			);
 			path = SessionCell;
+			sourceTree = "<group>";
+		};
+		ADC3E4BC21B61A8A00FFB922 /* TaskCell */ = {
+			isa = PBXGroup;
+			children = (
+				ADC3E4BD21B61A9F00FFB922 /* TaskCell.swift */,
+				ADC3E4BE21B61A9F00FFB922 /* TaskCell.xib */,
+			);
+			path = TaskCell;
+			sourceTree = "<group>";
+		};
+		ADC3E4C121B61D9300FFB922 /* VoteCell */ = {
+			isa = PBXGroup;
+			children = (
+				ADC3E4C221B61DB100FFB922 /* VoteCell.swift */,
+				ADC3E4C321B61DB100FFB922 /* VoteCell.xib */,
+			);
+			path = VoteCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -569,12 +597,14 @@
 			files = (
 				AD502EC521B4EA1800EEC965 /* VotingTaskView.xib in Resources */,
 				AD502EA521B4CACA00EEC965 /* EnterRoomView.xib in Resources */,
+				ADC3E4C021B61A9F00FFB922 /* TaskCell.xib in Resources */,
 				AD502EBE21B4E1E300EEC965 /* NewTaskView.xib in Resources */,
 				6B830A8B211BA1CA003BFFC3 /* .swiftlint.yml in Resources */,
 				AD502EAC21B4DB1900EEC965 /* SessionRoomView.xib in Resources */,
 				6B830A9B211C82D0003BFFC3 /* OnboardingView.xib in Resources */,
 				ADC3E4B921B6151200FFB922 /* SessionCell.xib in Resources */,
 				6B0A2C6C211A20110047A450 /* LaunchScreen.storyboard in Resources */,
+				ADC3E4C521B61DB100FFB922 /* VoteCell.xib in Resources */,
 				6B818D7B211F2CA400C9B53D /* MainView.xib in Resources */,
 				AD502E9C21B4C2F000EEC965 /* UsernameView.xib in Resources */,
 				6B818D75211F2C2900C9B53D /* LoginView.xib in Resources */,
@@ -718,6 +748,7 @@
 				AD502EAA21B4DB1900EEC965 /* SessionRoomView.swift in Sources */,
 				6B818D79211F2CA400C9B53D /* MainView.swift in Sources */,
 				AD502EA421B4CACA00EEC965 /* EnterRoomViewModel.swift in Sources */,
+				ADC3E4C421B61DB100FFB922 /* VoteCell.swift in Sources */,
 				6B818D6B211F29BD00C9B53D /* LocalStorage.swift in Sources */,
 				6B830A9A211C82D0003BFFC3 /* OnboardingViewModel.swift in Sources */,
 				6B818D7A211F2CA400C9B53D /* MainViewModel.swift in Sources */,
@@ -741,6 +772,7 @@
 				6B830A9D211C8313003BFFC3 /* DefaultContainer.swift in Sources */,
 				AD502E9B21B4C2F000EEC965 /* UsernameViewModel.swift in Sources */,
 				6B818D74211F2C2900C9B53D /* LoginViewModel.swift in Sources */,
+				ADC3E4BF21B61A9F00FFB922 /* TaskCell.swift in Sources */,
 				6B818D6D211F29C800C9B53D /* LocalStorageImpl.swift in Sources */,
 				AD502EC321B4EA1800EEC965 /* VotingTaskView.swift in Sources */,
 				AD502EB121B4DB5A00EEC965 /* LoadingView.swift in Sources */,

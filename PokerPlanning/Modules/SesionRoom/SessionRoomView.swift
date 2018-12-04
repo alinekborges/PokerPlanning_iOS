@@ -52,7 +52,9 @@ extension SessionRoomView {
     func configureViews() {
         self.cloudView.tagBackgroundColor = .slate
         self.cloudView.textColor = .white
-        self.tableView.register(TaskTableViewCell.self, forCellReuseIdentifier: "cell")
+        self.tableView.register(UINib(nibName: "TaskCell", bundle: Bundle.main), forCellReuseIdentifier: "cell")
+        self.tableView.rowHeight = 80
+        self.tableView.separatorStyle = .none
         self.titleLabel.text = self.roomID
         
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(
@@ -74,8 +76,8 @@ extension SessionRoomView {
         self.viewModel.tasks
             .drive(self.tableView.rx
                 .items(cellIdentifier: "cell",
-                       cellType: UITableViewCell.self)) { _, element, cell in
-                        cell.textLabel?.text = element.description
+                       cellType: TaskCell.self)) { _, element, cell in
+                        cell.bind(element)
             }.disposed(by: rx.disposeBag)
         
         self.newTaskButton.rx.tap.bind { [weak self] _ in
