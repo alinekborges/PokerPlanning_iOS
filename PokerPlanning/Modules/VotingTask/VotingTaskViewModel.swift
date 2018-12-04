@@ -15,6 +15,7 @@ class VotingTaskViewModel {
     let didVote: Driver<Bool>
     let votingCompleted: Driver<Bool>
     let votingClosed: Observable<Void>
+    let finishEnabled: Driver<Bool>
     let title: Driver<String>
     
     let repository: PlanningRepository
@@ -36,6 +37,10 @@ class VotingTaskViewModel {
         let votingCompleted = votesArray
             .map { $0.contains(where: { $0.vote == nil }) }
             .map { !$0 }
+        
+        self.finishEnabled = votesArray
+            .map { $0.allEqual() }
+            .asDriver(onErrorJustReturn: false)
         
         self.votingCompleted = votingCompleted
             .asDriver(onErrorJustReturn: false)
@@ -74,5 +79,14 @@ class VotingTaskViewModel {
     
     func completeTask(vote: Int) -> Observable<Void> {
         return self.repository.completeTask(taskID, roomID: roomID, vote: vote)
+    }
+}
+
+extension Array where Element: Equatable {
+    func allEqual() -> Bool {
+        if let firstElem = first {
+            return !dropFirst().contains { $0 != firstElem }
+        }
+        return true
     }
 }

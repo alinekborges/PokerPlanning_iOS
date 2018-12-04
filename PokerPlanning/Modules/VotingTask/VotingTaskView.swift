@@ -97,11 +97,11 @@ extension VotingTaskView {
                         cell.bind(element)
             }.disposed(by: rx.disposeBag)
         
-        self.viewModel.votingCompleted
+        self.viewModel.finishEnabled
             .drive(self.finishButton.rx.isEnabled)
             .disposed(by: rx.disposeBag)
         
-        self.viewModel.votingCompleted
+        self.viewModel.finishEnabled
             .map { $0 ? 1.0 : 0.4 }
             .drive(self.finishButton.rx.alpha)
             .disposed(by: rx.disposeBag)

@@ -20,7 +20,7 @@ struct Task: Codable {
     }
 }
 
-struct Vote: Codable {
+struct Vote: Codable, Equatable {
     let vote: Int?
     let username: String
     

@@ -33,7 +33,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="TBt-yj-anJ">
-                    <rect key="frame" x="30" y="102" width="315" height="95"/>
+                    <rect key="frame" x="30" y="112.5" width="315" height="95"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Tp-OA-CDF" customClass="VotingButton" customModule="PokerPlanning" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="0.0" width="95" height="95"/>
@@ -71,7 +71,7 @@
                     </subviews>
                 </stackView>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="DyV-2B-OXz">
-                    <rect key="frame" x="30" y="263" width="315" height="301"/>
+                    <rect key="frame" x="30" y="273.5" width="315" height="290.5"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </tableView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cpv-uX-QHs" customClass="OrangeButton" customModule="PokerPlanning" customModuleProvider="target">
@@ -99,7 +99,7 @@
                 <constraint firstItem="cpv-uX-QHs" firstAttribute="top" secondItem="DyV-2B-OXz" secondAttribute="bottom" constant="37" id="Oqf-fN-PXd"/>
                 <constraint firstItem="DyV-2B-OXz" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="UPo-gd-9So"/>
                 <constraint firstItem="ul5-Ia-ipb" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="WxV-KV-uDt"/>
-                <constraint firstItem="TBt-yj-anJ" firstAttribute="top" secondItem="ul5-Ia-ipb" secondAttribute="bottom" constant="21.5" id="ltL-gQ-7Bo"/>
+                <constraint firstItem="TBt-yj-anJ" firstAttribute="top" secondItem="ul5-Ia-ipb" secondAttribute="bottom" constant="32" id="ltL-gQ-7Bo"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="cpv-uX-QHs" secondAttribute="trailing" constant="30" id="mvB-Us-zG1"/>
                 <constraint firstItem="DyV-2B-OXz" firstAttribute="top" secondItem="TBt-yj-anJ" secondAttribute="bottom" constant="66" id="wrR-32-twd"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ul5-Ia-ipb" secondAttribute="trailing" constant="30" id="zBK-a5-erk"/>

@@ -86,17 +86,19 @@ extension SessionRoomView {
         
         self.viewModel.currentTask
             .drive(onNext: { [weak self] task in
-                //TODO: show alert before going to other screen
                 if !task.isEmpty {
-                    //self?.delegate?.handle(.voting(taskID: task))
-                    print("go to task")
-                    self?.showAlert(title: "Task", message: "task", completion: { _ in
-                        self?.delegate?.handle(.voting(taskID: task))
-                    })
-                    
+                    self?.enterVoting(task: task)
                 }
             }).disposed(by: rx.disposeBag)
         
+    }
+    
+    func enterVoting(task: String) {
+        let view = AlertView(title: "Vamos para uma votação?") {
+            self.delegate?.handle(.voting(taskID: task))
+        }
+        
+        self.present(view, animated: false, completion: nil)
     }
 }
 

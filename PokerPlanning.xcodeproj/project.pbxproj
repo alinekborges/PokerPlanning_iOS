@@ -71,6 +71,8 @@
 		ADC3E4C021B61A9F00FFB922 /* TaskCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADC3E4BE21B61A9F00FFB922 /* TaskCell.xib */; };
 		ADC3E4C421B61DB100FFB922 /* VoteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC3E4C221B61DB100FFB922 /* VoteCell.swift */; };
 		ADC3E4C521B61DB100FFB922 /* VoteCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADC3E4C321B61DB100FFB922 /* VoteCell.xib */; };
+		ADC3E4CA21B621DD00FFB922 /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC3E4C721B621DD00FFB922 /* AlertView.swift */; };
+		ADC3E4CC21B621DD00FFB922 /* AlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = ADC3E4C921B621DD00FFB922 /* AlertView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -164,6 +166,8 @@
 		ADC3E4BE21B61A9F00FFB922 /* TaskCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TaskCell.xib; sourceTree = "<group>"; };
 		ADC3E4C221B61DB100FFB922 /* VoteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteCell.swift; sourceTree = "<group>"; };
 		ADC3E4C321B61DB100FFB922 /* VoteCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VoteCell.xib; sourceTree = "<group>"; };
+		ADC3E4C721B621DD00FFB922 /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
+		ADC3E4C921B621DD00FFB922 /* AlertView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlertView.xib; sourceTree = "<group>"; };
 		B3BBB82BC6ABEE0BE030FDE6 /* Pods-PokerPlanning.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PokerPlanning.release.xcconfig"; path = "Pods/Target Support Files/Pods-PokerPlanning/Pods-PokerPlanning.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -293,6 +297,7 @@
 		6B0A2C92211A335E0047A450 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				ADC3E4C621B621BE00FFB922 /* Alert */,
 				AD502EBF21B4EA0600EEC965 /* VotingTask */,
 				AD502EB821B4E1CB00EEC965 /* NewTask */,
 				AD502EAD21B4DB4B00EEC965 /* Components */,
@@ -482,6 +487,15 @@
 			path = VoteCell;
 			sourceTree = "<group>";
 		};
+		ADC3E4C621B621BE00FFB922 /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+				ADC3E4C721B621DD00FFB922 /* AlertView.swift */,
+				ADC3E4C921B621DD00FFB922 /* AlertView.xib */,
+			);
+			path = Alert;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -596,6 +610,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD502EC521B4EA1800EEC965 /* VotingTaskView.xib in Resources */,
+				ADC3E4CC21B621DD00FFB922 /* AlertView.xib in Resources */,
 				AD502EA521B4CACA00EEC965 /* EnterRoomView.xib in Resources */,
 				ADC3E4C021B61A9F00FFB922 /* TaskCell.xib in Resources */,
 				AD502EBE21B4E1E300EEC965 /* NewTaskView.xib in Resources */,
@@ -775,6 +790,7 @@
 				ADC3E4BF21B61A9F00FFB922 /* TaskCell.swift in Sources */,
 				6B818D6D211F29C800C9B53D /* LocalStorageImpl.swift in Sources */,
 				AD502EC321B4EA1800EEC965 /* VotingTaskView.swift in Sources */,
+				ADC3E4CA21B621DD00FFB922 /* AlertView.swift in Sources */,
 				AD502EB121B4DB5A00EEC965 /* LoadingView.swift in Sources */,
 				AD502EA321B4CACA00EEC965 /* EnterRoomView.swift in Sources */,
 				6B830A90211C71BB003BFFC3 /* Coordinator.swift in Sources */,

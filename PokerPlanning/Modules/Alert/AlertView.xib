@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AlertView" customModule="PokerPlanning" customModuleProvider="target">
+            <connections>
+                <outlet property="titleLabel" destination="j6b-ad-JTn" id="cP4-RT-SZ2"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fN5-YF-nWf">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="z3B-5L-YGd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.30078125" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <blurEffect style="light"/>
+                </visualEffectView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="esA-Ls-dnc" customClass="MaterialCardView" customModule="PokerPlanning" customModuleProvider="target">
+                    <rect key="frame" x="42" y="253.5" width="291" height="180"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Descrição" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j6b-ad-JTn">
+                            <rect key="frame" x="12" y="12" width="267" height="82"/>
+                            <fontDescription key="fontDescription" type="system" weight="light" pointSize="22"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="252" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QgI-Dn-M1W" customClass="OrangeButton" customModule="PokerPlanning" customModuleProvider="target">
+                            <rect key="frame" x="12" y="114" width="267" height="46"/>
+                            <color key="backgroundColor" red="0.93497949840000005" green="0.5064561367" blue="0.49410349129999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="46" id="D48-iG-1fH"/>
+                            </constraints>
+                            <state key="normal" title="OK">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="confirmTap:" destination="-1" eventType="touchUpInside" id="5TX-o7-78E"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="QgI-Dn-M1W" secondAttribute="trailing" constant="12" id="6bS-1I-kDJ"/>
+                        <constraint firstAttribute="height" constant="180" id="iDH-3q-QoD"/>
+                        <constraint firstItem="j6b-ad-JTn" firstAttribute="leading" secondItem="esA-Ls-dnc" secondAttribute="leading" constant="12" id="imn-1a-zNa"/>
+                        <constraint firstItem="j6b-ad-JTn" firstAttribute="top" secondItem="esA-Ls-dnc" secondAttribute="top" constant="12" id="jLp-Qz-gkA"/>
+                        <constraint firstAttribute="trailing" secondItem="j6b-ad-JTn" secondAttribute="trailing" constant="12" id="kV0-O4-Snf"/>
+                        <constraint firstAttribute="bottom" secondItem="QgI-Dn-M1W" secondAttribute="bottom" constant="20" id="lKm-io-K93"/>
+                        <constraint firstItem="QgI-Dn-M1W" firstAttribute="leading" secondItem="esA-Ls-dnc" secondAttribute="leading" constant="12" id="wo7-M7-AHO"/>
+                        <constraint firstItem="QgI-Dn-M1W" firstAttribute="top" secondItem="j6b-ad-JTn" secondAttribute="bottom" constant="20" id="xJy-EU-CCh"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="esA-Ls-dnc" secondAttribute="trailing" constant="42" id="3tw-ed-7cS"/>
+                <constraint firstItem="esA-Ls-dnc" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="42" id="E5Q-ny-1ro"/>
+                <constraint firstItem="esA-Ls-dnc" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="F4O-yo-lCx"/>
+                <constraint firstItem="fN5-YF-nWf" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="g22-p4-yd5"/>
+                <constraint firstItem="fN5-YF-nWf" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="hGY-cF-mgl"/>
+                <constraint firstItem="fN5-YF-nWf" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="iin-Iv-waL"/>
+                <constraint firstItem="esA-Ls-dnc" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="oTT-D0-Xms"/>
+                <constraint firstItem="fN5-YF-nWf" firstAttribute="bottom" secondItem="i5M-Pr-FkT" secondAttribute="bottom" id="zYe-3G-3Gm"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="140" y="48.125937031484263"/>
+        </view>
+    </objects>
+</document>
